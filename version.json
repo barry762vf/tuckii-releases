@@ -1,7 +1,7 @@
 {
-  "version": "1.3.8",
-  "version_code": 12,
-  "notes": "🎬 Tuckii v1.3.8: 1-Tap Instagram Reels & TikTok Video Downloader directly to Gallery (Movies/Tuckii), smart post-download cleanup prompt to keep or remove links, 5 animated interactive mascot poses & expressions with squash-and-stretch physics, high-contrast NeoWhite Unsorted folder, and seen notification state turning top button white & black!",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.3.8/Tuckii.apk",
-  "sha256": "3b53ea34dca1565305272bda6ffa65ba81b225cf102bd0f87719c1ce20b5512c"
+  "version": "1.3.9",
+  "version_code": 13,
+  "notes": "🎬 Tuckii v1.3.9: 1-Tap 'Add New Collection' sheet directly from Home top-right folder icon, space-saving 2-column vertical grid shelf for collections, 5-action radial arc with quick 'Move' picker, 3-dots collection editor (rename, color, icon), reliable universal video downloader with badges, animated mascot with particle star bursts and Super Hero crown, dynamic settings version, and redesigned crystal-clear patch notes visual guides!",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.3.9/Tuckii.apk",
+  "sha256": "fdcbd4e63e77738b244e671203a8346544351e61c6d0cd949f50e892270df0e6"
 }
