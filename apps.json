@@ -1,0 +1,64 @@
+{
+  "hub": {
+    "id": "hub",
+    "package_name": "com.tuckai.hub",
+    "name": "Tuckii Hub",
+    "tagline": "Central Ecosystem Portal & Suite Updater",
+    "description": "Manage, update, and discover all companion apps in the Tuckii family.",
+    "version": "1.0.0",
+    "version_code": 1,
+    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-hub/TuckiiHub.apk",
+    "sha256": "81ada114c77f3e7d11a1a1fa05e087a997703318096a32d6e352ec8c183ed943",
+    "category": "Ecosystem Portal",
+    "accent_color": "#2E3AF2",
+    "status": "ready",
+    "features": ["Suite Launcher", "Automatic Updater", "Keystore Shield", "Deep Linking"]
+  },
+  "apps": [
+    {
+      "id": "tuckii",
+      "package_name": "com.tuckai.app",
+      "name": "Tuckii",
+      "tagline": "Offline-First Bookmark & Media Manager",
+      "description": "High-speed social video downloader, offline reader, and neo-brutalist bookmark shelf with zero external exits.",
+      "version": "1.4.4",
+      "version_code": 18,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.4/Tuckii.apk",
+      "sha256": "e34726c8016974e02ae2646c8b11377d5e150433037c882100da43693ab88c87",
+      "category": "Media & Bookmarks",
+      "accent_color": "#C96F4F",
+      "status": "ready",
+      "features": ["100% In-App Video Downloader", "Smart Duplicate Ingestion", "Instant Search", "Batch Undo Delete"]
+    },
+    {
+      "id": "games",
+      "package_name": "com.tuckai.games",
+      "name": "Tuckii Arcade",
+      "tagline": "Mascot Mini-Games & Reflex Challenges",
+      "description": "Play fast-paced retro mini-games starring Tuckii the mascot. Unlock special collector badges and shelf themes.",
+      "version": "0.1.0",
+      "version_code": 1,
+      "download_url": "",
+      "sha256": "",
+      "category": "Games & Fun",
+      "accent_color": "#6B7F5B",
+      "status": "coming_soon",
+      "features": ["Tuckii Jump", "Memory Match", "Speed Sort", "Collector Trophies"]
+    },
+    {
+      "id": "safety",
+      "package_name": "com.tuckai.safety",
+      "name": "Tuckii Guard",
+      "tagline": "Privacy Vault & System Security Shield",
+      "description": "End-to-end encrypted backup vault, permissions inspector, and local safety scanner for your device.",
+      "version": "0.1.0",
+      "version_code": 1,
+      "download_url": "",
+      "sha256": "",
+      "category": "Security & Vault",
+      "accent_color": "#D9C9B2",
+      "status": "coming_soon",
+      "features": ["Encrypted Vault", "App Permissions Audit", "Secure Backup Sync", "Local Privacy Shield"]
+    }
+  ]
+}
