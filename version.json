@@ -1,7 +1,7 @@
 {
-  "version": "1.4.4",
-  "version_code": 18,
-  "notes": "⚡ Tuckii v1.4.4 — Instant Search, Batch Multi-Undo & Smart Tag Merging: zero typing lag in search (60fps responsive text input with background indexing), full multi-item batch undo recovery in collections, smart duplicate saving with tag merging and folder preservation, and clean single Neubrutalist UNDO feedback.",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.4/Tuckii.apk",
-  "sha256": "e34726c8016974e02ae2646c8b11377d5e150433037c882100da43693ab88c87"
+  "version": "1.4.5",
+  "version_code": 19,
+  "notes": "🌐 Tuckii v1.4.5 — Abood Labs Studio Portal & Bi-Directional Ecosystem Launcher: seamless bi-directional integration with Abood Labs, tactile [ ⚡ LABS ] portal button in header and Settings, 1-tap in-app installer with cryptographic SHA-256 verification, and shared keystore security.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.5/Tuckii.apk",
+  "sha256": "4d041192f897abce48708f224faeb718d42f94bc21358f6ee553d75d5416f61a"
 }
