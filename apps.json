@@ -21,10 +21,10 @@
       "name": "Tuckii",
       "tagline": "Offline-First Bookmark & Media Manager",
       "description": "High-speed social video downloader, offline reader, and neo-brutalist bookmark shelf with zero external exits.",
-      "version": "1.4.6",
-      "version_code": 20,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.6/Tuckii.apk",
-      "sha256": "380f3048a5648898b452e66eb2814a42fbf9e7d2ef016e8c20731fbe30a77070",
+      "version": "1.4.7",
+      "version_code": 21,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.7/Tuckii.apk",
+      "sha256": "5fb27e262bfc602fdb2ec1d026f03d91ad8abe0b2fb8215311f93f538065b844",
       "category": "Media & Bookmarks",
       "accent_color": "#C96F4F",
       "status": "ready",
@@ -36,14 +36,14 @@
       "name": "Aman | أمان",
       "tagline": "Emergency Guide & Rapid Safety Response",
       "description": "Complete emergency guide for Iraq: 911 SOS, first aid rescue, anti-extortion center, civil defense, and emergency numbers.",
-      "version": "1.0.1",
-      "version_code": 2,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.1-aman/Aman.apk",
-      "sha256": "29154f6730550d640adc9fa6f946986153f30c6af7c6c7efb7f13cc643be4efe",
+      "version": "1.0.2",
+      "version_code": 3,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.2-aman/Aman.apk",
+      "sha256": "1fa7cf63f6bce66dfba379fbcd38de002cf8a0be72493efee834cd37396a408d",
       "category": "Emergency & Safety",
       "accent_color": "#FB3640",
       "status": "ready",
-      "features": ["911 Instant SOS", "Offline First Aid", "Anti-Extortion Center", "GPS Location Dispatcher", "In-App Updater", "Abood Labs Hub Integration"]
+      "features": ["911 Instant SOS", "Offline First Aid", "Anti-Extortion Center", "GPS Location Dispatcher", "In-App Native Downloader", "Abood Labs Hub Integration"]
     }
   ]
 }
