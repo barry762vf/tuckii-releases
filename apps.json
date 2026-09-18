@@ -5,14 +5,14 @@
     "name": "Abood Labs",
     "tagline": "Central Ecosystem Portal & Suite Launcher",
     "description": "The creative studio hub connecting Tuckii, Aman emergency guide, and companion tools.",
-    "version": "1.0.1",
-    "version_code": 2,
-    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.1-hub/AboodLabs.apk",
-    "sha256": "dfca2f37f36f83081e5630b82d43d67c7472e3198fef3adce83d746c05bba05a",
+    "version": "1.0.2",
+    "version_code": 3,
+    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.2-hub/AboodLabs.apk",
+    "sha256": "445f7677ee5cc6514aaca6ccf7d81d735de7eb1f27a9820cfdc3fdcfb4f9a2c4",
     "category": "Ecosystem Portal",
     "accent_color": "#2E3AF2",
     "status": "ready",
-    "features": ["Suite Launcher", "Automatic Startup Updater", "Keystore Shield", "Deep Linking"]
+    "features": ["Suite Launcher", "Automatic Startup Updater", "Keystore Shield", "Deep Linking", "In-App Inter-Updater"]
   },
   "apps": [
     {
@@ -24,11 +24,11 @@
       "version": "1.4.6",
       "version_code": 20,
       "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.6/Tuckii.apk",
-      "sha256": "c1ac8c3414b7181a03dad7c45f858de7d9f50f9dd2cc213af7ef5cba91f7084a",
+      "sha256": "380f3048a5648898b452e66eb2814a42fbf9e7d2ef016e8c20731fbe30a77070",
       "category": "Media & Bookmarks",
       "accent_color": "#C96F4F",
       "status": "ready",
-      "features": ["Abood Labs Portal", "Instagram Carousel Parser", "100% In-App Video Downloader", "Refined Top Bar", "Batch Undo Delete"]
+      "features": ["Abood Labs Portal", "Instagram Carousel Parser", "100% In-App Video Downloader", "Refined Top Bar", "Batch Undo Delete", "Inter-App Hub Updater"]
     },
     {
       "id": "aman",
@@ -36,14 +36,14 @@
       "name": "Aman | أمان",
       "tagline": "Emergency Guide & Rapid Safety Response",
       "description": "Complete emergency guide for Iraq: 911 SOS, first aid rescue, anti-extortion center, civil defense, and emergency numbers.",
-      "version": "1.0.0",
-      "version_code": 1,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-aman/Aman.apk",
-      "sha256": "97f64ce3a0f2c5c708b6ba3447e2e480207b4d9d422c214dda1b2216e374e984",
+      "version": "1.0.1",
+      "version_code": 2,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.1-aman/Aman.apk",
+      "sha256": "29154f6730550d640adc9fa6f946986153f30c6af7c6c7efb7f13cc643be4efe",
       "category": "Emergency & Safety",
       "accent_color": "#FB3640",
       "status": "ready",
-      "features": ["911 Instant SOS", "Offline First Aid", "Anti-Extortion Center", "GPS Location Dispatcher", "In-App Updater"]
+      "features": ["911 Instant SOS", "Offline First Aid", "Anti-Extortion Center", "GPS Location Dispatcher", "In-App Updater", "Abood Labs Hub Integration"]
     }
   ]
 }
