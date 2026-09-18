@@ -11,7 +11,7 @@ Official public release repository for the **Tuckii** bookmark manager for Andro
 - **🛡️ Unclipped NeoSmallButton Architecture**: Tactile small button system with ample clearance preventing button text slicing.
 - **🔔 Background Android System Notifications**: Periodic background checks via WorkManager alerting you with system notifications when updates arrive.
 - **🛡️ Cryptographic SHA-256 Checksum Validation**:
-  `dd2a592da7cf5752d42127e02a3fb6b6d11e538116e36e3b649cb86486b68246`
+  `1a8c29f17dedd05d69be6a747f88f60d561b585a478f471f2ad1a0566b8e8314`
 
 ---
 *This repository is dedicated exclusively to distribution binaries and release notes.*
