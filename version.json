@@ -1,7 +1,7 @@
 {
-  "version": "1.4.2",
-  "version_code": 16,
-  "notes": "🚀 Tuckii v1.4.2: 100% In-App Video Downloader! Streamlined single Download button saving directly to your Gallery under Movies/Tuckii. Completely removed external download tool buttons and external app exits. Powered by SocialDownloader engine with silent background MP4 extraction and embedded in-app verification sheet!",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.2/Tuckii.apk",
-  "sha256": "6cf9099d88c30478341c9cc8f5682a84d828eb8e7d937da8479a76d914ebc518"
+  "version": "1.4.3",
+  "version_code": 17,
+  "notes": "⚡ Tuckii v1.4.3 — The Speed Update: much faster search (waits until you stop typing), smart image caching so covers load instantly and scroll is smooth, faster app startup with a trimmed splash screen and a much smaller optimized app. 🧠 Smart Save: saving a link you already have no longer creates duplicates — Tuckii refreshes its details and keeps your tags, notes and collection. ↩️ Undo Delete: no more confirmation popups — deleting is instant, and a black UNDO bar at the bottom lets you restore a link (with everything intact) within a few seconds.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.3/Tuckii.apk",
+  "sha256": "12699f31753bb19e7c8433488e9aab9e2408a718f259c926f558f00f2da9aa98"
 }

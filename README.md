@@ -2,17 +2,16 @@
 
 Official public release repository for the **Tuckii** bookmark manager for Android.
 
-### 📥 Latest Release: v1.4.2
-- **[Download Tuckii v1.4.2 APK](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.2/Tuckii.apk)**
-- **📥 100% In-App Video Downloader**: Download Instagram Reels, TikToks, YouTube Shorts, and X videos completely inside Tuckii.
-- **⚡ Single Clean Download Button**: Removed all buttons, icons, and menus pointing to external download tools or external apps.
-- **⚡ SocialDownloader Engine Integration**: High-speed background API extraction silently saves `.mp4` video files directly to your device's Photos & Gallery (`Movies/Tuckii`).
-- **🌐 Embedded In-App Downloader Sheet**: If direct headless extraction requires verification, Tuckii opens an embedded Neo-Brutalist sheet with auto-pasted link and stream intercept to catch the download automatically.
-- **🎨 High-Contrast Caramel Amber Theme**: Solid warm caramel amber styling across Activity notifications, greetings, and video banners.
-- **🛡️ Unclipped NeoSmallButton Architecture**: Tactile small button system with ample clearance preventing button text slicing.
-- **🔔 Background Android System Notifications**: Periodic background checks via WorkManager alerting you with system notifications when updates arrive.
+### 📥 Latest Release: v1.4.3 — The Speed Update
+- **[Download Tuckii v1.4.3 APK](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.3/Tuckii.apk)**
+- **⚡ Much Faster Search**: Search waits until you pause typing, then loads results instantly — no more lag on every keystroke.
+- **🖼️ Smart Image Caching**: Cover images now use a dedicated memory & disk cache, so scrolling feels instant and previously seen images load even offline.
+- **🚀 Faster Startup**: A trimmed splash screen and a smaller, optimized app (R8-minified — the download is ~80% smaller) make Tuckii open noticeably quicker.
+- **🧠 Smart Save (No Duplicates)**: Saving a link that's already in your library no longer creates a copy — Tuckii refreshes its title, description and cover while keeping your tags, notes and collection exactly as they were.
+- **↩️ Undo Delete**: The "Are you sure?" popup is gone. Deleting is instant, and a black UNDO bar at the bottom of the screen restores the link (with tags, notes and collection intact) within a few seconds if you change your mind.
 - **🛡️ Cryptographic SHA-256 Checksum Validation**:
-  `6cf9099d88c30478341c9cc8f5682a84d828eb8e7d937da8479a76d914ebc518`
+  `12699f31753bb19e7c8433488e9aab9e2408a718f259c926f558f00f2da9aa98`
 
 ---
+
 *This repository is dedicated exclusively to distribution binaries and release notes.*
