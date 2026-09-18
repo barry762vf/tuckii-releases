@@ -2,15 +2,15 @@
 
 Official public release repository for the **Tuckii** bookmark manager for Android.
 
-### 📥 Latest Release: v1.4.3 — The Speed Update
-- **[Download Tuckii v1.4.3 APK](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.3/Tuckii.apk)**
-- **⚡ Much Faster Search**: Search waits until you pause typing, then loads results instantly — no more lag on every keystroke.
-- **🖼️ Smart Image Caching**: Cover images now use a dedicated memory & disk cache, so scrolling feels instant and previously seen images load even offline.
-- **🚀 Faster Startup**: A trimmed splash screen and a smaller, optimized app (R8-minified — the download is ~80% smaller) make Tuckii open noticeably quicker.
-- **🧠 Smart Save (No Duplicates)**: Saving a link that's already in your library no longer creates a copy — Tuckii refreshes its title, description and cover while keeping your tags, notes and collection exactly as they were.
-- **↩️ Undo Delete**: The "Are you sure?" popup is gone. Deleting is instant, and a black UNDO bar at the bottom of the screen restores the link (with tags, notes and collection intact) within a few seconds if you change your mind.
+### 📥 Latest Release: v1.4.4 — Instant Search, Batch Multi-Undo & Smart Tag Merging
+- **[Download Tuckii v1.4.4 APK](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.4/Tuckii.apk)**
+- **⚡ Instant 60 FPS Search Typing**: Bound search input directly to state to completely eliminate the typing stutter — every character appears with zero latency while queries index in the background.
+- **↩️ Multi-Item Batch Undo Recovery**: When deleting multiple bookmarks via selection mode in collections, Tuckii now preserves every single item. The black bottom UNDO bar lets you restore all of them in one tap with collections, tags, and notes intact.
+- **🧠 Smart Save Tag Merging & Folder Routing**: Re-saving links that already exist in your library merges new tags without overwriting old ones, updates assigned folders, and preserves your notes.
+- **🛡️ Neubrutalist Feedback Polish**: Cleaned up conflicting system toasts so the high-contrast Neubrutalist black/yellow UNDO snackbar is the sole, beautiful feedback UI.
+- **⚡ High-Performance Core**: R8 code shrinking (~2.4 MB APK), Coil 20% RAM / 100 MB disk caching, and 500ms snappy startup.
 - **🛡️ Cryptographic SHA-256 Checksum Validation**:
-  `12699f31753bb19e7c8433488e9aab9e2408a718f259c926f558f00f2da9aa98`
+  `e34726c8016974e02ae2646c8b11377d5e150433037c882100da43693ab88c87`
 
 ---
 

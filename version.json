@@ -1,7 +1,7 @@
 {
-  "version": "1.4.3",
-  "version_code": 17,
-  "notes": "⚡ Tuckii v1.4.3 — The Speed Update: much faster search (waits until you stop typing), smart image caching so covers load instantly and scroll is smooth, faster app startup with a trimmed splash screen and a much smaller optimized app. 🧠 Smart Save: saving a link you already have no longer creates duplicates — Tuckii refreshes its details and keeps your tags, notes and collection. ↩️ Undo Delete: no more confirmation popups — deleting is instant, and a black UNDO bar at the bottom lets you restore a link (with everything intact) within a few seconds.",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.3/Tuckii.apk",
-  "sha256": "12699f31753bb19e7c8433488e9aab9e2408a718f259c926f558f00f2da9aa98"
+  "version": "1.4.4",
+  "version_code": 18,
+  "notes": "⚡ Tuckii v1.4.4 — Instant Search, Batch Multi-Undo & Smart Tag Merging: zero typing lag in search (60fps responsive text input with background indexing), full multi-item batch undo recovery in collections, smart duplicate saving with tag merging and folder preservation, and clean single Neubrutalist UNDO feedback.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.4/Tuckii.apk",
+  "sha256": "e34726c8016974e02ae2646c8b11377d5e150433037c882100da43693ab88c87"
 }
