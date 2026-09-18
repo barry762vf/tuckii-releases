@@ -4,15 +4,15 @@
     "package_name": "com.tuckai.hub",
     "name": "Abood Labs",
     "tagline": "Central Ecosystem Portal & Suite Launcher",
-    "description": "The creative studio hub connecting Tuckii, Arcade mini-games, Guard security, and companion tools.",
-    "version": "1.0.0",
-    "version_code": 1,
-    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-hub/TuckiiHub.apk",
-    "sha256": "95c561b4c767f2b82ee85323c3ab6cd3b36b9f627ee01428098728bdf1d560e7",
+    "description": "The creative studio hub connecting Tuckii, Aman emergency guide, and companion tools.",
+    "version": "1.0.1",
+    "version_code": 2,
+    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.1-hub/AboodLabs.apk",
+    "sha256": "8b375993926cd1d6e18786aee02cc1acab9047d2b5b2258e9b29fd192754beeb",
     "category": "Ecosystem Portal",
     "accent_color": "#2E3AF2",
     "status": "ready",
-    "features": ["Suite Launcher", "Automatic Updater", "Keystore Shield", "Deep Linking"]
+    "features": ["Suite Launcher", "Automatic Startup Updater", "Keystore Shield", "Deep Linking"]
   },
   "apps": [
     {
@@ -21,44 +21,29 @@
       "name": "Tuckii",
       "tagline": "Offline-First Bookmark & Media Manager",
       "description": "High-speed social video downloader, offline reader, and neo-brutalist bookmark shelf with zero external exits.",
-      "version": "1.4.5",
-      "version_code": 19,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.5/Tuckii.apk",
-      "sha256": "4d041192f897abce48708f224faeb718d42f94bc21358f6ee553d75d5416f61a",
+      "version": "1.4.6",
+      "version_code": 20,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.6/Tuckii.apk",
+      "sha256": "61102bd64af8d6c610de66cada0b718d3d06d7ffd325b06e8d686227fbec1402",
       "category": "Media & Bookmarks",
       "accent_color": "#C96F4F",
       "status": "ready",
-      "features": ["Abood Labs Portal", "100% In-App Video Downloader", "Smart Duplicate Ingestion", "Instant Search", "Batch Undo Delete"]
+      "features": ["Abood Labs Portal", "Instagram Carousel Parser", "100% In-App Video Downloader", "Refined Top Bar", "Batch Undo Delete"]
     },
     {
-      "id": "games",
-      "package_name": "com.tuckai.games",
-      "name": "Tuckii Arcade",
-      "tagline": "Mascot Mini-Games & Reflex Challenges",
-      "description": "Play fast-paced retro mini-games starring Tuckii the mascot. Unlock special collector badges and shelf themes.",
-      "version": "0.1.0",
+      "id": "aman",
+      "package_name": "com.iraq.emergency.guide",
+      "name": "Aman | أمان",
+      "tagline": "Emergency Guide & Rapid Safety Response",
+      "description": "Complete emergency guide for Iraq: 911 SOS, first aid rescue, anti-extortion center, civil defense, and emergency numbers.",
+      "version": "1.0.0",
       "version_code": 1,
-      "download_url": "",
-      "sha256": "",
-      "category": "Games & Fun",
-      "accent_color": "#6B7F5B",
-      "status": "coming_soon",
-      "features": ["Tuckii Jump", "Memory Match", "Speed Sort", "Collector Trophies"]
-    },
-    {
-      "id": "safety",
-      "package_name": "com.tuckai.safety",
-      "name": "Tuckii Guard",
-      "tagline": "Privacy Vault & System Security Shield",
-      "description": "End-to-end encrypted backup vault, permissions inspector, and local safety scanner for your device.",
-      "version": "0.1.0",
-      "version_code": 1,
-      "download_url": "",
-      "sha256": "",
-      "category": "Security & Vault",
-      "accent_color": "#D9C9B2",
-      "status": "coming_soon",
-      "features": ["Encrypted Vault", "App Permissions Audit", "Secure Backup Sync", "Local Privacy Shield"]
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-aman/Aman.apk",
+      "sha256": "1f0bf8eb5fe845a16b4d9acd6de289821240e869afcd806aee72c5b5ef10b1df",
+      "category": "Emergency & Safety",
+      "accent_color": "#FB3640",
+      "status": "ready",
+      "features": ["911 Instant SOS", "Offline First Aid", "Anti-Extortion Center", "GPS Location Dispatcher", "In-App Updater"]
     }
   ]
 }

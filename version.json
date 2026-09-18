@@ -1,7 +1,7 @@
 {
-  "version": "1.4.5",
-  "version_code": 19,
-  "notes": "🌐 Tuckii v1.4.5 — Abood Labs Studio Portal & Bi-Directional Ecosystem Launcher: seamless bi-directional integration with Abood Labs, tactile [ ⚡ LABS ] portal button in header and Settings, 1-tap in-app installer with cryptographic SHA-256 verification, and shared keystore security.",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.5/Tuckii.apk",
-  "sha256": "4d041192f897abce48708f224faeb718d42f94bc21358f6ee553d75d5416f61a"
+  "version": "1.4.6",
+  "version_code": 20,
+  "notes": "⚡ Tuckii v1.4.6 — Instagram Carousel Parser & Top Bar Redesign: Fixed Instagram multi-photo slide URL parsing (resolving hyphen truncation), preserved carousel slide indices (img_index), refreshed re-saved links to feed top, and balanced header layout with 44dp tactile touch targets.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.6/Tuckii.apk",
+  "sha256": "61102bd64af8d6c610de66cada0b718d3d06d7ffd325b06e8d686227fbec1402"
 }
