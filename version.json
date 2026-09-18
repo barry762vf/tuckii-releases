@@ -3,5 +3,5 @@
   "version_code": 20,
   "notes": "⚡ Tuckii v1.4.6 — Instagram Carousel Parser & Top Bar Redesign: Fixed Instagram multi-photo slide URL parsing (resolving hyphen truncation), preserved carousel slide indices (img_index), refreshed re-saved links to feed top, and balanced header layout with 44dp tactile touch targets.",
   "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.6/Tuckii.apk",
-  "sha256": "61102bd64af8d6c610de66cada0b718d3d06d7ffd325b06e8d686227fbec1402"
+  "sha256": "c1ac8c3414b7181a03dad7c45f858de7d9f50f9dd2cc213af7ef5cba91f7084a"
 }
