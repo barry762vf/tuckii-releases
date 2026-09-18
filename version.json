@@ -1,7 +1,7 @@
 {
-  "version": "1.4.0",
-  "version_code": 14,
-  "notes": "🚀 Tuckii v1.4.0: Universal Video Downloader Tool with seamless Web Downloader (FastDL / Cobalt) and Telegram Bot fallback for Instagram Reels, fixed button vertical clipping and text slicing on Open Folder and Download buttons, rich high-contrast caramel styling for alerts and unsorted links, background system notifications for app updates even when closed, fixed Home page APK installation and unknown sources permissions, and full architecture documentation!",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.0/Tuckii.apk",
-  "sha256": "0fb475de51b65e827cdd6afbfc255d13a326f0aa24977ee71184554dc0864383"
+  "version": "1.4.1",
+  "version_code": 15,
+  "notes": "🚀 Tuckii v1.4.1: 100% In-App Video Downloader! Save Instagram Reels, TikToks, YouTube Shorts, and X videos directly inside Tuckii without ever leaving to external browsers or apps. Powered by the SocialDownloader engine with silent background MP4 extraction, embedded In-App Downloader Sheet with auto-paste, and direct saving into your device Gallery under Movies/Tuckii!",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.1/Tuckii.apk",
+  "sha256": "dd2a592da7cf5752d42127e02a3fb6b6d11e538116e36e3b649cb86486b68246"
 }

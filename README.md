@@ -2,15 +2,16 @@
 
 Official public release repository for the **Tuckii** bookmark manager for Android.
 
-### 📥 Latest Release: v1.4.0
-- **[Download Tuckii v1.4.0 APK](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.0/Tuckii.apk)**
-- **🌐 Universal Video Downloader Tool**: 100% reliable video saving with automatic link clipboard copy and 1-tap launchers to fast web tools (FastDL / Cobalt) and Telegram bots (@SaveAsBot) when Instagram enforces login walls.
-- **🎨 High-Contrast Caramel Amber Theme**: Replaced muddy semi-transparent overlays with solid warm caramel amber cards for alerts and unsorted links greeting.
-- **🛡️ Unclipped NeoSmallButton Architecture**: New tactile small button system with ample clearance preventing button text slicing across all screens and bottom sheets.
-- **🔔 Background Android System Notifications**: Periodic background checks via WorkManager that alert you with a high-priority system notification when a new update drops, even when the app is closed.
-- **🚀 Fixed Home Page Update Installer**: Added GitHub redirect asset whitelisting and unknown sources permission checking.
-- **🤖 Comprehensive AI Agent Handover Documentation**: `AGENT_HANDOVER.md` and `ARCHITECTURE.md` for seamless collaboration with GLM 3.5 Flash.
-- **🛡️ Cryptographic SHA-256 Checksum Validation & Keystore Lock**
+### 📥 Latest Release: v1.4.1
+- **[Download Tuckii v1.4.1 APK](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.1/Tuckii.apk)**
+- **📥 100% In-App Video Downloader**: Download Instagram Reels, TikToks, YouTube Shorts, and X videos completely inside Tuckii. Zero exits to external browsers, Chrome tabs, or Telegram bots!
+- **⚡ SocialDownloader Engine Integration**: High-speed background API extraction silently saves `.mp4` video files directly to your device's Photos & Gallery (`Movies/Tuckii`).
+- **🌐 Embedded In-App Downloader Sheet**: If direct headless extraction requires verification, Tuckii opens an embedded Neo-Brutalist sheet with auto-pasted link and stream intercept to catch the download automatically.
+- **🎨 High-Contrast Caramel Amber Theme**: Solid warm caramel amber styling across Activity notifications, greetings, and video banners.
+- **🛡️ Unclipped NeoSmallButton Architecture**: Tactile small button system with ample clearance preventing button text slicing.
+- **🔔 Background Android System Notifications**: Periodic background checks via WorkManager alerting you with system notifications when updates arrive.
+- **🛡️ Cryptographic SHA-256 Checksum Validation**:
+  `dd2a592da7cf5752d42127e02a3fb6b6d11e538116e36e3b649cb86486b68246`
 
 ---
 *This repository is dedicated exclusively to distribution binaries and release notes.*
