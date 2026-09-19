@@ -145,7 +145,72 @@ $manifest = [ordered]@{
     (New-Object Text.UTF8Encoding($false))
 )
 
-Write-Output 'Wrote version.json and apps.json.'
+# --- Regenerate README.md so it can never drift from the APKs on disk ---
+# Placeholders are used (not interpolation) so the markdown backticks survive PowerShell's
+# escape rules. Every hash comes from Get-FileHash above — never typed by hand.
+$readme = @'
+# ⚡ Abood Labs — Official Android Releases
+
+Official public distribution repository for the **Abood Labs** ecosystem suite of Android applications.
+
+> Every `*.apk` here is signed with the unified ecosystem key, and `version.json` / `apps.json`
+> are published with detached ECDSA P-256 signatures (`*.sig`). Installed apps verify the
+> signature, the SHA-256 checksum **and** the APK's signing certificate before installing.
+> Regenerate this file with `.\generate-release.ps1` — never edit hashes by hand.
+
+---
+
+### 1. 🔖 Tuckii — Offline-First Media & Bookmark Manager (v__TUCKII_VER__)
+- **[Download Tuckii.apk (v__TUCKII_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__TUCKII_VER__/Tuckii.apk)**
+- **Package ID:** `com.tuckai.app`
+- **Build:** `versionCode __TUCKII_CODE__`
+- **SHA-256 Checksum:** `__TUCKII_SHA__`
+- **Highlights:**
+  - Update prompts restored for users on older builds (version-code driven detection).
+  - Every update verified: manifest signature, SHA-256 and APK signing certificate.
+  - Signed update manifests — a compromised repository cannot redirect installs.
+  - 100% in-app video downloader, instant search, batch undo.
+
+---
+
+### 2. 🚀 Abood Labs — Creative Studio Hub & Ecosystem Portal (v__HUB_VER__)
+- **[Download AboodLabs.apk (v__HUB_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__HUB_VER__-hub/AboodLabs.apk)**
+- **Package ID:** `com.tuckai.hub`
+- **Build:** `versionCode __HUB_CODE__`
+- **SHA-256 Checksum:** `__HUB_SHA__`
+- **Highlights:**
+  - Signature-verified suite manifest; installs pinned to the official certificate.
+  - Suite launcher with automatic startup update checks for all ecosystem apps.
+  - Native launch and 1-tap in-app install for Tuckii and Aman.
+
+---
+
+### 3. 🚨 Aman | أمان — Emergency Guide & Rapid Safety Response (v__AMAN_VER__)
+- **[Download Aman.apk (v__AMAN_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__AMAN_VER__-aman/Aman.apk)**
+- **Package ID:** `com.iraq.emergency.guide`
+- **Build:** `versionCode __AMAN_CODE__`
+- **SHA-256 Checksum:** `__AMAN_SHA__`
+- **Highlights:**
+  - Update manifest verified natively before the JavaScript layer is trusted.
+  - 911 Instant SOS and complete unified Iraqi emergency directory.
+  - 100% offline first aid protocols and anti-extortion dispatch.
+  - In-app OTA update checker querying the Abood Labs distribution channel.
+
+---
+
+*All applications are signed with the shared ecosystem key for trusted in-app cross-installation.
+Manifest checksums are computed from the APKs by `generate-release.ps1` — never edited by hand.*
+'@
+
+$readme = $readme.Replace('__TUCKII_VER__', $TuckiiVersion).Replace('__TUCKII_CODE__', [string] $TuckiiCode).Replace('__TUCKII_SHA__', $shaTuckii).Replace('__HUB_VER__', $HubVersion).Replace('__HUB_CODE__', [string] $HubCode).Replace('__HUB_SHA__', $shaHub).Replace('__AMAN_VER__', $AmanVersion).Replace('__AMAN_CODE__', [string] $AmanCode).Replace('__AMAN_SHA__', $shaAman)
+
+[IO.File]::WriteAllText(
+    (Join-Path $RepositoryPath 'README.md'),
+    $readme,
+    (New-Object Text.UTF8Encoding($false))
+)
+
+Write-Output 'Wrote version.json, apps.json and README.md.'
 Write-Output ''
 
 & (Join-Path $RepositoryPath 'sign-manifest.ps1') -Path `
