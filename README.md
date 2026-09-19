@@ -34,11 +34,11 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 3. 🚨 Aman | أمان — Emergency Guide & Rapid Safety Response (v1.0.3)
-- **[Download Aman.apk (v1.0.3)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.3-aman/Aman.apk)**
+### 3. 🚨 Aman | أمان — Emergency Guide & Rapid Safety Response (v1.0.4)
+- **[Download Aman.apk (v1.0.4)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.4-aman/Aman.apk)**
 - **Package ID:** `com.iraq.emergency.guide`
-- **Build:** `versionCode 4`
-- **SHA-256 Checksum:** `e4b5716df0f1a7855ee1aa4b0ead99c07eed34a220544d54157f2777bfd33b55`
+- **Build:** `versionCode 5`
+- **SHA-256 Checksum:** `1f4e9ad619d33ff82292b8aff89d4a1cdf5d8e48eb88d574331cc502bdc779ea`
 - **Highlights:**
   - Update manifest verified natively before the JavaScript layer is trusted.
   - 911 Instant SOS and complete unified Iraqi emergency directory.
