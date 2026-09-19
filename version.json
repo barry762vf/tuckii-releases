@@ -1,7 +1,7 @@
 {
-  "version": "1.4.7",
-  "version_code": 21,
-  "notes": "⚡ Tuckii v1.4.7 — Dedicated App Update Engine & Decoupled Hub Checks: Dedicated update checker for Tuckii, Instagram multi-photo slide URL parsing fix, and Abood Labs Hub inter-app updater integration.",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.7/Tuckii.apk",
-  "sha256": "aea090ea41f6851348b0f341ccb841f5e2fc51067704fabae75742a107189e17"
+  "version": "1.4.8",
+  "version_code": 22,
+  "notes": "Bug fixes and stability improvements.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.8/Tuckii.apk",
+  "sha256": "1d2706832799392c0a44e4732442922305f8facd619b4102956c3b032ba55678"
 }

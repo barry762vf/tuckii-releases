@@ -4,15 +4,22 @@
     "package_name": "com.tuckai.hub",
     "name": "Abood Labs",
     "tagline": "Central Ecosystem Portal & Suite Launcher",
-    "description": "The creative studio hub connecting Tuckii, Aman emergency guide, and companion tools.",
-    "version": "1.0.2",
-    "version_code": 3,
-    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.2-hub/AboodLabs.apk",
-    "sha256": "40ed03b447a53d06f6840ce3573e88a1bb2e88b0c723cda10fe048c426d0afb9",
+    "description": "The creative studio hub connecting Tuckii, Aman emergency guide, and companion tools. Every ecosystem update is cryptographically signed.",
+    "version": "1.0.3",
+    "version_code": 4,
+    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.3-hub/AboodLabs.apk",
+    "sha256": "860e5baddff0254b84dd966078200c075c71194a75e4f42a2c8a250103b9e272",
     "category": "Ecosystem Portal",
     "accent_color": "#2E3AF2",
     "status": "ready",
-    "features": ["Suite Launcher", "Automatic Startup Updater", "Keystore Shield", "Deep Linking", "In-App Inter-Updater"]
+    "features": [
+      "Signed Update Manifests",
+      "Signed APK Verification",
+      "Suite Launcher",
+      "Automatic Startup Updater",
+      "Keystore Shield",
+      "Deep Linking"
+    ]
   },
   "apps": [
     {
@@ -21,14 +28,21 @@
       "name": "Tuckii",
       "tagline": "Offline-First Bookmark & Media Manager",
       "description": "High-speed social video downloader, offline reader, and neo-brutalist bookmark shelf with zero external exits.",
-      "version": "1.4.7",
-      "version_code": 21,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.7/Tuckii.apk",
-      "sha256": "aea090ea41f6851348b0f341ccb841f5e2fc51067704fabae75742a107189e17",
+      "version": "1.4.8",
+      "version_code": 22,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.8/Tuckii.apk",
+      "sha256": "1d2706832799392c0a44e4732442922305f8facd619b4102956c3b032ba55678",
       "category": "Media & Bookmarks",
       "accent_color": "#C96F4F",
       "status": "ready",
-      "features": ["Abood Labs Portal", "Instagram Carousel Parser", "100% In-App Video Downloader", "Refined Top Bar", "Batch Undo Delete", "Inter-App Hub Updater"]
+      "features": [
+        "Signed Update Manifests",
+        "Signed APK Verification",
+        "Abood Labs Portal",
+        "100% In-App Video Downloader",
+        "Instant Search",
+        "Batch Undo Delete"
+      ]
     },
     {
       "id": "aman",
@@ -36,14 +50,22 @@
       "name": "Aman | أمان",
       "tagline": "Emergency Guide & Rapid Safety Response",
       "description": "Complete emergency guide for Iraq: 911 SOS, first aid rescue, anti-extortion center, civil defense, and emergency numbers.",
-      "version": "1.0.2",
-      "version_code": 3,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.2-aman/Aman.apk",
-      "sha256": "1fa7cf63f6bce66dfba379fbcd38de002cf8a0be72493efee834cd37396a408d",
+      "version": "1.0.3",
+      "version_code": 4,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.3-aman/Aman.apk",
+      "sha256": "e4b5716df0f1a7855ee1aa4b0ead99c07eed34a220544d54157f2777bfd33b55",
       "category": "Emergency & Safety",
       "accent_color": "#FB3640",
       "status": "ready",
-      "features": ["911 Instant SOS", "Offline First Aid", "Anti-Extortion Center", "GPS Location Dispatcher", "In-App Native Downloader", "Abood Labs Hub Integration"]
+      "features": [
+        "Signed Update Manifests",
+        "Signed APK Verification",
+        "911 Instant SOS",
+        "Offline First Aid",
+        "Anti-Extortion Center",
+        "GPS Location Dispatcher",
+        "Abood Labs Hub Integration"
+      ]
     }
   ]
 }
