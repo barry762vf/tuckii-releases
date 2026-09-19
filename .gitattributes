@@ -1,0 +1,3 @@
+version.json text eol=lf
+apps.json text eol=lf
+*.sig text eol=lf
