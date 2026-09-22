@@ -133,17 +133,37 @@ $manifest = [ordered]@{
     )
 }
 
+# Manifests MUST be written with LF line endings.
+# `.gitattributes` normalises version.json / apps.json / *.sig to LF, so signing CRLF bytes
+# produces a signature that does NOT match the file GitHub actually serves — which silently
+# breaks every in-app update (the app rejects the manifest and refuses to update). LF is
+# therefore enforced here and asserted before signing.
+function ConvertTo-LfText([string] $text) {
+    return $text.Replace("`r`n", "`n").Replace("`r", "`n")
+}
+
+$versionJsonText = ConvertTo-LfText (($versionJson | ConvertTo-Json -Depth 4) + "`n")
+$appsJsonText = ConvertTo-LfText (($manifest | ConvertTo-Json -Depth 8) + "`n")
+
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'version.json'),
-    ($versionJson | ConvertTo-Json -Depth 4),
+    $versionJsonText,
     (New-Object Text.UTF8Encoding($false))
 )
 
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'apps.json'),
-    ($manifest | ConvertTo-Json -Depth 8),
+    $appsJsonText,
     (New-Object Text.UTF8Encoding($false))
 )
+
+# Fail fast if any CR survived: a CRLF manifest can never carry a valid published signature.
+foreach ($name in @('version.json', 'apps.json')) {
+    $bytes = [IO.File]::ReadAllBytes((Join-Path $RepositoryPath $name))
+    if ($bytes -contains 13) {
+        throw "$name contains CR bytes. It must be LF-only, otherwise the signature will not match the served file."
+    }
+}
 
 # --- Regenerate README.md so it can never drift from the APKs on disk ---
 # Placeholders are used (not interpolation) so the markdown backticks survive PowerShell's
@@ -206,7 +226,7 @@ $readme = $readme.Replace('__TUCKII_VER__', $TuckiiVersion).Replace('__TUCKII_CO
 
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'README.md'),
-    $readme,
+    (ConvertTo-LfText $readme),
     (New-Object Text.UTF8Encoding($false))
 )
 
