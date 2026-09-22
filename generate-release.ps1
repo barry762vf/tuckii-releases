@@ -32,6 +32,10 @@ param(
     [Parameter(Mandatory = $true)][string] $KitchenVersion,
     [Parameter(Mandatory = $true)][int]    $KitchenCode,
 
+    [switch] $PublishMinhaj,
+    [string] $MinhajVersion = '1.0.0',
+    [int] $MinhajCode = 1,
+
     [string] $Notes = 'Bug fixes and stability improvements.'
 )
 
@@ -50,12 +54,17 @@ $shaHub     = Get-Sha256 (Join-Path $RepositoryPath 'AboodLabs.apk')
 $shaTuckii  = Get-Sha256 (Join-Path $RepositoryPath 'Tuckii.apk')
 $shaAman    = Get-Sha256 (Join-Path $RepositoryPath 'Aman.apk')
 $shaKitchen = Get-Sha256 (Join-Path $RepositoryPath 'Matbakhi.apk')
+$shaMinhaj = ''
+if ($PublishMinhaj) {
+    $shaMinhaj = Get-Sha256 (Join-Path $RepositoryPath 'Minhaj.apk')
+}
 
 Write-Output 'Hashes read from disk:'
 Write-Output "  AboodLabs.apk  $shaHub"
 Write-Output "  Tuckii.apk     $shaTuckii"
 Write-Output "  Aman.apk       $shaAman"
 Write-Output "  Matbakhi.apk   $shaKitchen"
+if ($PublishMinhaj) { Write-Output "  Minhaj.apk     $shaMinhaj" }
 Write-Output ''
 
 $versionJson = [ordered]@{
@@ -168,14 +177,14 @@ $manifest = [ordered]@{
             name          = 'منهاج'
             tagline       = 'رفيق القرآن الكريم والمسار اليومي'
             description   = 'قراءة القرآن، التفسير الميسر، الاستماع، ومتابعة التقدم سواء من داخل التطبيق أو من مصحفك الورقي.'
-            version       = '1.0.0'
-            version_code  = 1
-            download_url  = ''
-            sha256        = ''
+            version       = $MinhajVersion
+            version_code  = $MinhajCode
+            download_url  = if ($PublishMinhaj) { "$base/v$MinhajVersion-minhaj-beta/Minhaj.apk" } else { '' }
+            sha256        = $shaMinhaj
             category      = 'القرآن الكريم'
             accent_color  = '#0D4B3D'
             logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/minhaj.png'
-            status        = 'coming_soon'
+            status        = if ($PublishMinhaj) { 'beta' } else { 'coming_soon' }
             features      = @('قراءة دون اتصال', 'المصحف الورقي', 'تفسير ميسر', 'استماع وتذكير يومي')
         }
     )
@@ -281,10 +290,13 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 5. منهاج — Quran Companion (preview)
+### 5. منهاج — Quran Companion (__MINHAJ_STATE__)
+- **[Download Minhaj.apk (v__MINHAJ_VER__)](__MINHAJ_URL__)**
+- **Package ID:** `com.tuckai.minhaj`
+- **Build:** `versionCode __MINHAJ_CODE__`
+- **SHA-256 Checksum:** `__MINHAJ_SHA__`
 - Arabic-first reading, listening and progress tracking for in-app or physical Mushaf use.
-- A private test build exists, but public distribution awaits qualified Quran text, tafsir and audio review.
-- Shown as **coming soon** in Abood Labs; no public download is offered yet.
+- **Beta:** content checks are automated and are not scholarly approval; qualified review is still pending.
 
 ---
 
@@ -292,7 +304,9 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 Manifest checksums are computed from the APKs by `generate-release.ps1` — never edited by hand.*
 '@
 
-$readme = $readme.Replace('__TUCKII_VER__', $TuckiiVersion).Replace('__TUCKII_CODE__', [string] $TuckiiCode).Replace('__TUCKII_SHA__', $shaTuckii).Replace('__HUB_VER__', $HubVersion).Replace('__HUB_CODE__', [string] $HubCode).Replace('__HUB_SHA__', $shaHub).Replace('__AMAN_VER__', $AmanVersion).Replace('__AMAN_CODE__', [string] $AmanCode).Replace('__AMAN_SHA__', $shaAman).Replace('__KITCHEN_VER__', $KitchenVersion).Replace('__KITCHEN_CODE__', [string] $KitchenCode).Replace('__KITCHEN_SHA__', $shaKitchen)
+$minhajUrl = if ($PublishMinhaj) { "$base/v$MinhajVersion-minhaj-beta/Minhaj.apk" } else { '#' }
+$minhajState = if ($PublishMinhaj) { 'public beta' } else { 'preview' }
+$readme = $readme.Replace('__TUCKII_VER__', $TuckiiVersion).Replace('__TUCKII_CODE__', [string] $TuckiiCode).Replace('__TUCKII_SHA__', $shaTuckii).Replace('__HUB_VER__', $HubVersion).Replace('__HUB_CODE__', [string] $HubCode).Replace('__HUB_SHA__', $shaHub).Replace('__AMAN_VER__', $AmanVersion).Replace('__AMAN_CODE__', [string] $AmanCode).Replace('__AMAN_SHA__', $shaAman).Replace('__KITCHEN_VER__', $KitchenVersion).Replace('__KITCHEN_CODE__', [string] $KitchenCode).Replace('__KITCHEN_SHA__', $shaKitchen).Replace('__MINHAJ_STATE__', $minhajState).Replace('__MINHAJ_VER__', $MinhajVersion).Replace('__MINHAJ_CODE__', [string] $MinhajCode).Replace('__MINHAJ_SHA__', $shaMinhaj).Replace('__MINHAJ_URL__', $minhajUrl)
 
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'README.md'),

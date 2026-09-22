@@ -22,11 +22,11 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 2. 🚀 Abood Labs — Creative Studio Hub & Ecosystem Portal (v1.3.0)
-- **[Download AboodLabs.apk (v1.3.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.3.0-hub/AboodLabs.apk)**
+### 2. 🚀 Abood Labs — Creative Studio Hub & Ecosystem Portal (v1.4.0)
+- **[Download AboodLabs.apk (v1.4.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.0-hub/AboodLabs.apk)**
 - **Package ID:** `com.tuckai.hub`
-- **Build:** `versionCode 7`
-- **SHA-256 Checksum:** `463927b5675e43c18fd3c91c1ac0204d1b1fbb6d8b29a1bbf352e563fbda3844`
+- **Build:** `versionCode 8`
+- **SHA-256 Checksum:** `0be002ecdfa371054f411998fc8eb3c720cd3cc02023d3e2cb2700dd0b0ed530`
 - **Highlights:**
   - Signature-verified suite manifest; installs pinned to the official certificate.
   - Suite launcher with automatic startup update checks for all ecosystem apps.
@@ -62,10 +62,13 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 5. منهاج — Quran Companion (preview)
+### 5. منهاج — Quran Companion (public beta)
+- **[Download Minhaj.apk (v1.1.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-minhaj-beta/Minhaj.apk)**
+- **Package ID:** `com.tuckai.minhaj`
+- **Build:** `versionCode 2`
+- **SHA-256 Checksum:** `ffe77415fbda7d92e15882ee64fd68d4e7252f75eaed86b3cd42630c8a3bf75d`
 - Arabic-first reading, listening and progress tracking for in-app or physical Mushaf use.
-- A private test build exists, but public distribution awaits qualified Quran text, tafsir and audio review.
-- Shown as **coming soon** in Abood Labs; no public download is offered yet.
+- **Beta:** content checks are automated and are not scholarly approval; qualified review is still pending.
 
 ---
 
