@@ -5,12 +5,13 @@
     "name": "Abood Labs",
     "tagline": "Central Ecosystem Portal & Suite Launcher",
     "description": "The creative studio hub connecting Tuckii, Aman emergency guide, and companion tools. Every ecosystem update is cryptographically signed.",
-    "version": "1.0.3",
-    "version_code": 4,
-    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.3-hub/AboodLabs.apk",
-    "sha256": "860e5baddff0254b84dd966078200c075c71194a75e4f42a2c8a250103b9e272",
+    "version": "1.1.0",
+    "version_code": 5,
+    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-hub/AboodLabs.apk",
+    "sha256": "d7f44a2d515bacab2a069daf1beee882de64aa225dc42280c90a35dfaeb420da",
     "category": "Ecosystem Portal",
     "accent_color": "#2E3AF2",
+    "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/abood-labs.png",
     "status": "ready",
     "features": [
       "Signed Update Manifests",
@@ -34,6 +35,7 @@
       "sha256": "177ce8f894c046a6470a721ce37bcf4e7cbda9f9eaa5c6c1c14b2f434169aec7",
       "category": "Media & Bookmarks",
       "accent_color": "#C96F4F",
+      "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/tuckii.jpg",
       "status": "ready",
       "features": [
         "Signed Update Manifests",
@@ -56,6 +58,7 @@
       "sha256": "b9425932565a08679b2e8eb9ac2b0949061efa6df8d120cc8205496094721ae6",
       "category": "Emergency & Safety",
       "accent_color": "#FB3640",
+      "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/aman.png",
       "status": "ready",
       "features": [
         "Signed Update Manifests",
@@ -72,22 +75,23 @@
       "package_name": "com.tuckai.kitchen",
       "name": "مطبخي | Matbakhi",
       "tagline": "Offline Pantry, Recipes & Cook-Along Companion",
-      "description": "Fully offline Arabic kitchen companion: track pantry expiry dates, browse 20+ built-in Iraqi recipes, see instantly what you can cook right now, and follow a guided cook mode that updates your pantry and shopping list automatically.",
+      "description": "Fully offline Arabic kitchen companion with 50 built-in regional recipes, pantry tracking, ingredient matching, and guided cook mode.",
       "version": "1.1.0",
       "version_code": 2,
       "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-kitchen/Matbakhi.apk",
       "sha256": "cd12741f1e6f4c7e298c45817cddb49d38a0b46860939d5610b7e6840b3e4214",
       "category": "Kitchen & Recipes",
       "accent_color": "#0F372F",
+      "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/matbakhi.png",
       "status": "ready",
       "features": [
         "Signed Update Manifests",
         "Signed APK Verification",
         "100% Offline, No Accounts",
-        "20+ Built-in Iraqi Recipes",
+        "50 Built-in Regional Recipes",
         "Ingredient Match Engine",
         "Guided Cook Mode",
-        "Abood Labs Hub Integration"
+        "Tuckii Collaboration Link"
       ]
     }
   ]
