@@ -47,5 +47,19 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
+### 4. 🍲 مطبخي (Matbakhi) — Offline Pantry, Recipes & Cook-Along Companion (v1.0.0)
+- **[Download Matbakhi.apk (v1.0.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-kitchen/Matbakhi.apk)**
+- **Package ID:** `com.tuckai.kitchen`
+- **Build:** `versionCode 1`
+- **SHA-256 Checksum:** `17ff95c832355edfe58865bfa701f19adc843a94bc3bb61c5c88ecb3334605e8`
+- **Highlights:**
+  - 100% offline, Arabic-only, RTL-first — no accounts, no network permission at all.
+  - 20+ built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
+  - "ماذا أطبخ؟" ingredient-match engine and a guided cook mode that updates the pantry
+    and shopping list automatically.
+  - Signed update manifests and APK signer pinning like every other app in the suite.
+
+---
+
 *All applications are signed with the shared ecosystem key for trusted in-app cross-installation.
 Manifest checksums are computed from the APKs by `generate-release.ps1` — never edited by hand.*

@@ -66,6 +66,29 @@
         "GPS Location Dispatcher",
         "Abood Labs Hub Integration"
       ]
+    },
+    {
+      "id": "kitchen",
+      "package_name": "com.tuckai.kitchen",
+      "name": "مطبخي",
+      "tagline": "Offline Pantry, Recipes & Cook-Along Companion",
+      "description": "Fully offline Arabic kitchen companion: track pantry expiry dates, browse 20+ built-in Iraqi recipes, see instantly what you can cook right now, and follow a guided cook mode that updates your pantry and shopping list automatically.",
+      "version": "1.0.0",
+      "version_code": 1,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-kitchen/Matbakhi.apk",
+      "sha256": "17ff95c832355edfe58865bfa701f19adc843a94bc3bb61c5c88ecb3334605e8",
+      "category": "Kitchen & Recipes",
+      "accent_color": "#0F372F",
+      "status": "ready",
+      "features": [
+        "Signed Update Manifests",
+        "Signed APK Verification",
+        "100% Offline, No Accounts",
+        "20+ Built-in Iraqi Recipes",
+        "Ingredient Match Engine",
+        "Guided Cook Mode",
+        "Abood Labs Hub Integration"
+      ]
     }
   ]
 }

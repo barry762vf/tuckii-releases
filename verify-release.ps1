@@ -41,9 +41,10 @@ $entries += [pscustomobject]@{
 
 foreach ($a in $apps.apps) {
     $file = switch ($a.id) {
-        'tuckii' { 'Tuckii.apk' }
-        'aman'   { 'Aman.apk' }
-        default  { "$($a.id).apk" }
+        'tuckii'  { 'Tuckii.apk' }
+        'aman'    { 'Aman.apk' }
+        'kitchen' { 'Matbakhi.apk' }
+        default   { "$($a.id).apk" }
     }
     $entries += [pscustomobject]@{
         id      = $a.id

@@ -16,7 +16,8 @@
 .EXAMPLE
     .\generate-release.ps1 -TuckiiVersion 1.4.8 -TuckiiCode 22 `
                             -HubVersion 1.0.3  -HubCode 4 `
-                            -AmanVersion 1.0.3 -AmanCode 4
+                            -AmanVersion 1.0.3 -AmanCode 4 `
+                            -KitchenVersion 1.0.0 -KitchenCode 1
 #>
 [CmdletBinding()]
 param(
@@ -28,6 +29,8 @@ param(
     [Parameter(Mandatory = $true)][int]    $HubCode,
     [Parameter(Mandatory = $true)][string] $AmanVersion,
     [Parameter(Mandatory = $true)][int]    $AmanCode,
+    [Parameter(Mandatory = $true)][string] $KitchenVersion,
+    [Parameter(Mandatory = $true)][int]    $KitchenCode,
 
     [string] $Notes = 'Bug fixes and stability improvements.'
 )
@@ -43,14 +46,16 @@ function Get-Sha256([string] $Path) {
 
 $base = 'https://github.com/barry762vf/tuckii-releases/releases/download'
 
-$shaHub    = Get-Sha256 (Join-Path $RepositoryPath 'AboodLabs.apk')
-$shaTuckii = Get-Sha256 (Join-Path $RepositoryPath 'Tuckii.apk')
-$shaAman   = Get-Sha256 (Join-Path $RepositoryPath 'Aman.apk')
+$shaHub     = Get-Sha256 (Join-Path $RepositoryPath 'AboodLabs.apk')
+$shaTuckii  = Get-Sha256 (Join-Path $RepositoryPath 'Tuckii.apk')
+$shaAman    = Get-Sha256 (Join-Path $RepositoryPath 'Aman.apk')
+$shaKitchen = Get-Sha256 (Join-Path $RepositoryPath 'Matbakhi.apk')
 
 Write-Output 'Hashes read from disk:'
 Write-Output "  AboodLabs.apk  $shaHub"
 Write-Output "  Tuckii.apk     $shaTuckii"
 Write-Output "  Aman.apk       $shaAman"
+Write-Output "  Matbakhi.apk   $shaKitchen"
 Write-Output ''
 
 $versionJson = [ordered]@{
@@ -127,6 +132,29 @@ $manifest = [ordered]@{
                 'Offline First Aid',
                 'Anti-Extortion Center',
                 'GPS Location Dispatcher',
+                'Abood Labs Hub Integration'
+            )
+        },
+        [ordered]@{
+            id            = 'kitchen'
+            package_name  = 'com.tuckai.kitchen'
+            name          = 'مطبخي'
+            tagline       = 'Offline Pantry, Recipes & Cook-Along Companion'
+            description   = 'Fully offline Arabic kitchen companion: track pantry expiry dates, browse 20+ built-in Iraqi recipes, see instantly what you can cook right now, and follow a guided cook mode that updates your pantry and shopping list automatically.'
+            version       = $KitchenVersion
+            version_code  = $KitchenCode
+            download_url  = "$base/v$KitchenVersion-kitchen/Matbakhi.apk"
+            sha256        = $shaKitchen
+            category      = 'Kitchen & Recipes'
+            accent_color  = '#0F372F'
+            status        = 'ready'
+            features      = @(
+                'Signed Update Manifests',
+                'Signed APK Verification',
+                '100% Offline, No Accounts',
+                '20+ Built-in Iraqi Recipes',
+                'Ingredient Match Engine',
+                'Guided Cook Mode',
                 'Abood Labs Hub Integration'
             )
         }
@@ -218,11 +246,25 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
+### 4. 🍲 مطبخي (Matbakhi) — Offline Pantry, Recipes & Cook-Along Companion (v__KITCHEN_VER__)
+- **[Download Matbakhi.apk (v__KITCHEN_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__KITCHEN_VER__-kitchen/Matbakhi.apk)**
+- **Package ID:** `com.tuckai.kitchen`
+- **Build:** `versionCode __KITCHEN_CODE__`
+- **SHA-256 Checksum:** `__KITCHEN_SHA__`
+- **Highlights:**
+  - 100% offline, Arabic-only, RTL-first — no accounts, no network permission at all.
+  - 20+ built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
+  - "ماذا أطبخ؟" ingredient-match engine and a guided cook mode that updates the pantry
+    and shopping list automatically.
+  - Signed update manifests and APK signer pinning like every other app in the suite.
+
+---
+
 *All applications are signed with the shared ecosystem key for trusted in-app cross-installation.
 Manifest checksums are computed from the APKs by `generate-release.ps1` — never edited by hand.*
 '@
 
-$readme = $readme.Replace('__TUCKII_VER__', $TuckiiVersion).Replace('__TUCKII_CODE__', [string] $TuckiiCode).Replace('__TUCKII_SHA__', $shaTuckii).Replace('__HUB_VER__', $HubVersion).Replace('__HUB_CODE__', [string] $HubCode).Replace('__HUB_SHA__', $shaHub).Replace('__AMAN_VER__', $AmanVersion).Replace('__AMAN_CODE__', [string] $AmanCode).Replace('__AMAN_SHA__', $shaAman)
+$readme = $readme.Replace('__TUCKII_VER__', $TuckiiVersion).Replace('__TUCKII_CODE__', [string] $TuckiiCode).Replace('__TUCKII_SHA__', $shaTuckii).Replace('__HUB_VER__', $HubVersion).Replace('__HUB_CODE__', [string] $HubCode).Replace('__HUB_SHA__', $shaHub).Replace('__AMAN_VER__', $AmanVersion).Replace('__AMAN_CODE__', [string] $AmanCode).Replace('__AMAN_SHA__', $shaAman).Replace('__KITCHEN_VER__', $KitchenVersion).Replace('__KITCHEN_CODE__', [string] $KitchenCode).Replace('__KITCHEN_SHA__', $shaKitchen)
 
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'README.md'),
