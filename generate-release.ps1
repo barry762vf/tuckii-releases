@@ -138,7 +138,7 @@ $manifest = [ordered]@{
         [ordered]@{
             id            = 'kitchen'
             package_name  = 'com.tuckai.kitchen'
-            name          = 'مطبخي'
+            name          = 'مطبخي | Matbakhi'
             tagline       = 'Offline Pantry, Recipes & Cook-Along Companion'
             description   = 'Fully offline Arabic kitchen companion: track pantry expiry dates, browse 20+ built-in Iraqi recipes, see instantly what you can cook right now, and follow a guided cook mode that updates your pantry and shopping list automatically.'
             version       = $KitchenVersion

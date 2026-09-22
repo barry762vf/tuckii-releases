@@ -9,11 +9,11 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 1. 🔖 Tuckii — Offline-First Media & Bookmark Manager (v1.4.9)
-- **[Download Tuckii.apk (v1.4.9)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.9/Tuckii.apk)**
+### 1. 🔖 Tuckii — Offline-First Media & Bookmark Manager (v1.5.0)
+- **[Download Tuckii.apk (v1.5.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.0/Tuckii.apk)**
 - **Package ID:** `com.tuckai.app`
-- **Build:** `versionCode 23`
-- **SHA-256 Checksum:** `1d62294d8d4e0f41069794c6cec62ddf529cb6b7f16578ef66832406c9eee57f`
+- **Build:** `versionCode 24`
+- **SHA-256 Checksum:** `177ce8f894c046a6470a721ce37bcf4e7cbda9f9eaa5c6c1c14b2f434169aec7`
 - **Highlights:**
   - Update prompts restored for users on older builds (version-code driven detection).
   - Every update verified: manifest signature, SHA-256 and APK signing certificate.
@@ -47,11 +47,11 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 4. 🍲 مطبخي (Matbakhi) — Offline Pantry, Recipes & Cook-Along Companion (v1.0.0)
-- **[Download Matbakhi.apk (v1.0.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-kitchen/Matbakhi.apk)**
+### 4. 🍲 مطبخي (Matbakhi) — Offline Pantry, Recipes & Cook-Along Companion (v1.1.0)
+- **[Download Matbakhi.apk (v1.1.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-kitchen/Matbakhi.apk)**
 - **Package ID:** `com.tuckai.kitchen`
-- **Build:** `versionCode 1`
-- **SHA-256 Checksum:** `17ff95c832355edfe58865bfa701f19adc843a94bc3bb61c5c88ecb3334605e8`
+- **Build:** `versionCode 2`
+- **SHA-256 Checksum:** `cd12741f1e6f4c7e298c45817cddb49d38a0b46860939d5610b7e6840b3e4214`
 - **Highlights:**
   - 100% offline, Arabic-only, RTL-first — no accounts, no network permission at all.
   - 20+ built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.

@@ -1,7 +1,7 @@
 {
-  "version": "1.4.9",
-  "version_code": 23,
-  "notes": "Bug fixes and stability improvements.",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.9/Tuckii.apk",
-  "sha256": "1d62294d8d4e0f41069794c6cec62ddf529cb6b7f16578ef66832406c9eee57f"
+  "version": "1.5.0",
+  "version_code": 24,
+  "notes": "Tuckii: real folder-tree collection picker, plus a new live collaboration link with مطبخي. مطبخي: adaptive navigation fix for tablets/foldables, 30 more built-in recipes, signed update checker, and the same Tuckii collaboration link.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.0/Tuckii.apk",
+  "sha256": "177ce8f894c046a6470a721ce37bcf4e7cbda9f9eaa5c6c1c14b2f434169aec7"
 }
