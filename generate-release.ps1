@@ -260,7 +260,7 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
   - Suite launcher with automatic startup update checks for all ecosystem apps.
   - Native launch and 1-tap in-app install for available suite apps.
   - Horizontal, tap-to-enlarge screenshots captured from the Android emulator.
-  - Arabic app names remain visible at larger Android font sizes.
+  - Full-width Arabic app names stay on one line without clipping.
 
 ---
 

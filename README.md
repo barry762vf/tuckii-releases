@@ -22,17 +22,17 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 2. 🚀 Abood Labs — Creative Studio Hub & Ecosystem Portal (v1.4.1)
-- **[Download AboodLabs.apk (v1.4.1)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.1-hub/AboodLabs.apk)**
+### 2. 🚀 Abood Labs — Creative Studio Hub & Ecosystem Portal (v1.4.2)
+- **[Download AboodLabs.apk (v1.4.2)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.2-hub/AboodLabs.apk)**
 - **Package ID:** `com.tuckai.hub`
-- **Build:** `versionCode 9`
-- **SHA-256 Checksum:** `ce89c02dfcadac85316bdb4e463ae882d8dcd9c6f36befe4b8249663910721bf`
+- **Build:** `versionCode 10`
+- **SHA-256 Checksum:** `18f72663d502681124eb605a6179e01383a58e5981ef885d7d189ddbed90f2cd`
 - **Highlights:**
   - Signature-verified suite manifest; installs pinned to the official certificate.
   - Suite launcher with automatic startup update checks for all ecosystem apps.
   - Native launch and 1-tap in-app install for available suite apps.
   - Horizontal, tap-to-enlarge screenshots captured from the Android emulator.
-  - Arabic app names remain visible at larger Android font sizes.
+  - Full-width Arabic app names stay on one line without clipping.
 
 ---
 
