@@ -79,6 +79,7 @@ $manifest = [ordered]@{
         sha256        = $shaHub
         category      = 'Ecosystem Portal'
         accent_color  = '#2E3AF2'
+        logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/abood-labs.png'
         status        = 'ready'
         features      = @(
             'Signed Update Manifests',
@@ -102,6 +103,7 @@ $manifest = [ordered]@{
             sha256        = $shaTuckii
             category      = 'Media & Bookmarks'
             accent_color  = '#C96F4F'
+            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/tuckii.jpg'
             status        = 'ready'
             features      = @(
                 'Signed Update Manifests',
@@ -124,6 +126,7 @@ $manifest = [ordered]@{
             sha256        = $shaAman
             category      = 'Emergency & Safety'
             accent_color  = '#FB3640'
+            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/aman.png'
             status        = 'ready'
             features      = @(
                 'Signed Update Manifests',
@@ -140,22 +143,23 @@ $manifest = [ordered]@{
             package_name  = 'com.tuckai.kitchen'
             name          = 'مطبخي | Matbakhi'
             tagline       = 'Offline Pantry, Recipes & Cook-Along Companion'
-            description   = 'Fully offline Arabic kitchen companion: track pantry expiry dates, browse 20+ built-in Iraqi recipes, see instantly what you can cook right now, and follow a guided cook mode that updates your pantry and shopping list automatically.'
+            description   = 'Fully offline Arabic kitchen companion with 50 built-in regional recipes, pantry tracking, ingredient matching, and guided cook mode.'
             version       = $KitchenVersion
             version_code  = $KitchenCode
             download_url  = "$base/v$KitchenVersion-kitchen/Matbakhi.apk"
             sha256        = $shaKitchen
             category      = 'Kitchen & Recipes'
             accent_color  = '#0F372F'
+            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/matbakhi.png'
             status        = 'ready'
             features      = @(
                 'Signed Update Manifests',
                 'Signed APK Verification',
                 '100% Offline, No Accounts',
-                '20+ Built-in Iraqi Recipes',
+                '50 Built-in Regional Recipes',
                 'Ingredient Match Engine',
                 'Guided Cook Mode',
-                'Abood Labs Hub Integration'
+                'Tuckii Collaboration Link'
             )
         }
     )
