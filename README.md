@@ -22,15 +22,16 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 2. 🚀 Abood Labs — Creative Studio Hub & Ecosystem Portal (v1.1.0)
-- **[Download AboodLabs.apk (v1.1.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-hub/AboodLabs.apk)**
+### 2. 🚀 Abood Labs — Creative Studio Hub & Ecosystem Portal (v1.2.0)
+- **[Download AboodLabs.apk (v1.2.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.2.0-hub/AboodLabs.apk)**
 - **Package ID:** `com.tuckai.hub`
-- **Build:** `versionCode 5`
-- **SHA-256 Checksum:** `d7f44a2d515bacab2a069daf1beee882de64aa225dc42280c90a35dfaeb420da`
+- **Build:** `versionCode 6`
+- **SHA-256 Checksum:** `e7966db511737a390c89c057c8f6d0e890ed4da0cd841b44476362c6c6c15e8b`
 - **Highlights:**
   - Signature-verified suite manifest; installs pinned to the official certificate.
   - Suite launcher with automatic startup update checks for all ecosystem apps.
-  - Native launch and 1-tap in-app install for Tuckii and Aman.
+  - Native launch and 1-tap in-app install for available suite apps.
+  - Horizontal, tap-to-enlarge screenshots captured from the Android emulator.
 
 ---
 
@@ -58,6 +59,13 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
   - "ماذا أطبخ؟" ingredient-match engine and a guided cook mode that updates the pantry
     and shopping list automatically.
   - Signed update manifests and APK signer pinning like every other app in the suite.
+
+---
+
+### 5. منهاج — Quran Companion (preview)
+- Arabic-first reading, listening and progress tracking for in-app or physical Mushaf use.
+- A private test build exists, but public distribution awaits qualified Quran text, tafsir and audio review.
+- Shown as **coming soon** in Abood Labs; no public download is offered yet.
 
 ---
 

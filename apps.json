@@ -4,11 +4,11 @@
     "package_name": "com.tuckai.hub",
     "name": "Abood Labs",
     "tagline": "Central Ecosystem Portal & Suite Launcher",
-    "description": "The creative studio hub connecting Tuckii, Aman emergency guide, and companion tools. Every ecosystem update is cryptographically signed.",
-    "version": "1.1.0",
-    "version_code": 5,
-    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-hub/AboodLabs.apk",
-    "sha256": "d7f44a2d515bacab2a069daf1beee882de64aa225dc42280c90a35dfaeb420da",
+    "description": "The creative studio hub connecting Tuckii, Aman, Matbakhi, and Minhaj. Every ecosystem update is cryptographically signed.",
+    "version": "1.2.0",
+    "version_code": 6,
+    "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.2.0-hub/AboodLabs.apk",
+    "sha256": "e7966db511737a390c89c057c8f6d0e890ed4da0cd841b44476362c6c6c15e8b",
     "category": "Ecosystem Portal",
     "accent_color": "#2E3AF2",
     "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/abood-labs.png",
@@ -92,6 +92,27 @@
         "Ingredient Match Engine",
         "Guided Cook Mode",
         "Tuckii Collaboration Link"
+      ]
+    },
+    {
+      "id": "minhaj",
+      "package_name": "com.tuckai.minhaj",
+      "name": "منهاج",
+      "tagline": "رفيق القرآن الكريم والمسار اليومي",
+      "description": "قراءة القرآن، التفسير الميسر، الاستماع، ومتابعة التقدم سواء من داخل التطبيق أو من مصحفك الورقي.",
+      "version": "1.0.0",
+      "version_code": 1,
+      "download_url": "",
+      "sha256": "",
+      "category": "القرآن الكريم",
+      "accent_color": "#0D4B3D",
+      "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/minhaj.png",
+      "status": "coming_soon",
+      "features": [
+        "قراءة دون اتصال",
+        "المصحف الورقي",
+        "تفسير ميسر",
+        "استماع وتذكير يومي"
       ]
     }
   ]

@@ -40,6 +40,17 @@ $entries += [pscustomobject]@{
 }
 
 foreach ($a in $apps.apps) {
+    if ($a.status -eq 'coming_soon') {
+        if (-not [string]::IsNullOrWhiteSpace($a.download_url) -or
+            -not [string]::IsNullOrWhiteSpace($a.sha256)) {
+            Write-Output "INVALID PREVIEW : $($a.id) must not offer an unverified public APK"
+            $ok = $false
+        }
+        else {
+            Write-Output "PREVIEW ONLY    : $($a.id) (no public APK)"
+        }
+        continue
+    }
     $file = switch ($a.id) {
         'tuckii'  { 'Tuckii.apk' }
         'aman'    { 'Aman.apk' }
