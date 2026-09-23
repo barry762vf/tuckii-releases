@@ -1,7 +1,7 @@
 {
-  "version": "1.6.0",
-  "version_code": 25,
-  "notes": "Tuckii 1.6.0 adds Tuckii-owned collaboration approval, a dedicated Matbakhi collection, stable shared bookmark IDs, and keeps private notes private. Matbakhi 1.2.1 adds persistent drafts, source provenance and duplicate-import protection; the follow-up also opens the original source link from the editor.",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.6.0/Tuckii.apk",
-  "sha256": "2631b3bc5df1fc985e37854f205b8ee66e16a168d0460f826d64b037a7cba762"
+  "version": "1.6.1",
+  "version_code": 26,
+  "notes": "Tuckii 1.6.1 fixes the displayed installed version and update comparison, so an already-installed release is not offered again. Tuckii 1.6.0 and Matbakhi 1.2.1 collaboration features remain included.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.6.1/Tuckii.apk",
+  "sha256": "45f5eaf8cd925e5a104ebd356b68e67e8be42a721783fa2da474946da4ad1d56"
 }

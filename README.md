@@ -9,11 +9,11 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 1. 🔖 Tuckii — Offline-First Media & Bookmark Manager (v1.6.0)
-- **[Download Tuckii.apk (v1.6.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.6.0/Tuckii.apk)**
+### 1. 🔖 Tuckii — Offline-First Media & Bookmark Manager (v1.6.1)
+- **[Download Tuckii.apk (v1.6.1)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.6.1/Tuckii.apk)**
 - **Package ID:** `com.tuckai.app`
-- **Build:** `versionCode 25`
-- **SHA-256 Checksum:** `2631b3bc5df1fc985e37854f205b8ee66e16a168d0460f826d64b037a7cba762`
+- **Build:** `versionCode 26`
+- **SHA-256 Checksum:** `45f5eaf8cd925e5a104ebd356b68e67e8be42a721783fa2da474946da4ad1d56`
 - **Highlights:**
   - Update prompts restored for users on older builds (version-code driven detection).
   - Every update verified: manifest signature, SHA-256 and APK signing certificate.
