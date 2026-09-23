@@ -99,11 +99,11 @@
       "package_name": "com.tuckai.minhaj",
       "name": "منهاج",
       "tagline": "رفيق القرآن الكريم والمسار اليومي",
-      "description": "قراءة القرآن، التفسير الميسر، الاستماع، ومتابعة التقدم سواء من داخل التطبيق أو من مصحفك الورقي.",
-      "version": "1.1.0",
-      "version_code": 2,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-minhaj-beta/Minhaj.apk",
-      "sha256": "ffe77415fbda7d92e15882ee64fd68d4e7252f75eaed86b3cd42630c8a3bf75d",
+      "description": "قراءة القرآن، آيات وأدعية قرآنية مختارة، الاستماع، ومتابعة التقدم داخل التطبيق أو من المصحف الورقي.",
+      "version": "1.2.0",
+      "version_code": 3,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.2.0-minhaj-beta/Minhaj.apk",
+      "sha256": "23422d99ab313cfc3c99367cc6d17c782d91c10f63fd439c3da6e326fa7662e4",
       "category": "القرآن الكريم",
       "accent_color": "#0D4B3D",
       "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/minhaj.png",
@@ -111,7 +111,7 @@
       "features": [
         "قراءة دون اتصال",
         "المصحف الورقي",
-        "تفسير ميسر",
+        "آيات وأدعية من القرآن",
         "استماع وتذكير يومي"
       ]
     }

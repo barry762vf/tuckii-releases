@@ -176,7 +176,7 @@ $manifest = [ordered]@{
             package_name  = 'com.tuckai.minhaj'
             name          = 'منهاج'
             tagline       = 'رفيق القرآن الكريم والمسار اليومي'
-            description   = 'قراءة القرآن، التفسير الميسر، الاستماع، ومتابعة التقدم سواء من داخل التطبيق أو من مصحفك الورقي.'
+            description   = 'قراءة القرآن، آيات وأدعية قرآنية مختارة، الاستماع، ومتابعة التقدم داخل التطبيق أو من المصحف الورقي.'
             version       = $MinhajVersion
             version_code  = $MinhajCode
             download_url  = if ($PublishMinhaj) { "$base/v$MinhajVersion-minhaj-beta/Minhaj.apk" } else { '' }
@@ -185,7 +185,7 @@ $manifest = [ordered]@{
             accent_color  = '#0D4B3D'
             logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/minhaj.png'
             status        = if ($PublishMinhaj) { 'beta' } else { 'coming_soon' }
-            features      = @('قراءة دون اتصال', 'المصحف الورقي', 'تفسير ميسر', 'استماع وتذكير يومي')
+            features      = @('قراءة دون اتصال', 'المصحف الورقي', 'آيات وأدعية من القرآن', 'استماع وتذكير يومي')
         }
     )
 }
@@ -297,6 +297,7 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 - **Build:** `versionCode __MINHAJ_CODE__`
 - **SHA-256 Checksum:** `__MINHAJ_SHA__`
 - Arabic-first reading, listening and progress tracking for in-app or physical Mushaf use.
+- Curated Quran passages and Quranic supplications; no hadith or tafsir section.
 - **Beta:** content checks are automated and are not scholarly approval; qualified review is still pending.
 
 ---

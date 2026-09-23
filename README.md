@@ -64,11 +64,12 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 ---
 
 ### 5. منهاج — Quran Companion (public beta)
-- **[Download Minhaj.apk (v1.1.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-minhaj-beta/Minhaj.apk)**
+- **[Download Minhaj.apk (v1.2.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.2.0-minhaj-beta/Minhaj.apk)**
 - **Package ID:** `com.tuckai.minhaj`
-- **Build:** `versionCode 2`
-- **SHA-256 Checksum:** `ffe77415fbda7d92e15882ee64fd68d4e7252f75eaed86b3cd42630c8a3bf75d`
+- **Build:** `versionCode 3`
+- **SHA-256 Checksum:** `23422d99ab313cfc3c99367cc6d17c782d91c10f63fd439c3da6e326fa7662e4`
 - Arabic-first reading, listening and progress tracking for in-app or physical Mushaf use.
+- Curated Quran passages and Quranic supplications; no hadith or tafsir section.
 - **Beta:** content checks are automated and are not scholarly approval; qualified review is still pending.
 
 ---
