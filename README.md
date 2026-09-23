@@ -9,16 +9,17 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 1. 🔖 Tuckii — Offline-First Media & Bookmark Manager (v1.5.0)
-- **[Download Tuckii.apk (v1.5.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.0/Tuckii.apk)**
+### 1. 🔖 Tuckii — Offline-First Media & Bookmark Manager (v1.6.0)
+- **[Download Tuckii.apk (v1.6.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.6.0/Tuckii.apk)**
 - **Package ID:** `com.tuckai.app`
-- **Build:** `versionCode 24`
-- **SHA-256 Checksum:** `177ce8f894c046a6470a721ce37bcf4e7cbda9f9eaa5c6c1c14b2f434169aec7`
+- **Build:** `versionCode 25`
+- **SHA-256 Checksum:** `2631b3bc5df1fc985e37854f205b8ee66e16a168d0460f826d64b037a7cba762`
 - **Highlights:**
   - Update prompts restored for users on older builds (version-code driven detection).
   - Every update verified: manifest signature, SHA-256 and APK signing certificate.
   - Signed update manifests — a compromised repository cannot redirect installs.
   - 100% in-app video downloader, instant search, batch undo.
+  - Scoped Matbakhi collaboration collection with stable record identity; private notes are not shared.
 
 ---
 
@@ -49,16 +50,18 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 4. 🍲 مطبخي (Matbakhi) — Offline Pantry, Recipes & Cook-Along Companion (v1.1.0)
-- **[Download Matbakhi.apk (v1.1.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-kitchen/Matbakhi.apk)**
+### 4. 🍲 مطبخي (Matbakhi) — Offline Pantry, Recipes & Cook-Along Companion (v1.2.0)
+- **[Download Matbakhi.apk (v1.2.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.2.0-kitchen/Matbakhi.apk)**
 - **Package ID:** `com.tuckai.kitchen`
-- **Build:** `versionCode 2`
-- **SHA-256 Checksum:** `cd12741f1e6f4c7e298c45817cddb49d38a0b46860939d5610b7e6840b3e4214`
+- **Build:** `versionCode 3`
+- **SHA-256 Checksum:** `841841ad302d0a841e4fe739a73d0de1fb5e44c7bd31451dbe29174cbb9ddc0e`
 - **Highlights:**
   - 100% offline, Arabic-only, RTL-first — no accounts, no network permission at all.
-  - 20+ built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
+  - 50 built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
   - "ماذا أطبخ؟" ingredient-match engine and a guided cook mode that updates the pantry
     and shopping list automatically.
+  - Tuckii imports become persistent, editable drafts with source provenance and duplicate protection.
+    User approval remains controlled by Tuckii.
   - Signed update manifests and APK signer pinning like every other app in the suite.
 
 ---

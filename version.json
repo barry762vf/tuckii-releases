@@ -1,7 +1,7 @@
 {
-  "version": "1.5.0",
-  "version_code": 24,
-  "notes": "Tuckii: real folder-tree collection picker, plus a new live collaboration link with مطبخي. مطبخي: adaptive navigation fix for tablets/foldables, 30 more built-in recipes, signed update checker, and the same Tuckii collaboration link.",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.0/Tuckii.apk",
-  "sha256": "177ce8f894c046a6470a721ce37bcf4e7cbda9f9eaa5c6c1c14b2f434169aec7"
+  "version": "1.6.0",
+  "version_code": 25,
+  "notes": "Tuckii 1.6.0 adds Tuckii-owned collaboration approval, a dedicated Matbakhi collection, stable shared bookmark IDs, and keeps private notes private. Matbakhi 1.2.0 adds persistent recipe drafts, source provenance, duplicate-import protection, and migration-safe recovery.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.6.0/Tuckii.apk",
+  "sha256": "2631b3bc5df1fc985e37854f205b8ee66e16a168d0460f826d64b037a7cba762"
 }

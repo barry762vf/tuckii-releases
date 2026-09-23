@@ -120,7 +120,9 @@ $manifest = [ordered]@{
                 'Abood Labs Portal',
                 '100% In-App Video Downloader',
                 'Instant Search',
-                'Batch Undo Delete'
+                'Batch Undo Delete',
+                'Scoped Matbakhi collaboration collection',
+                'Stable bookmark IDs and private notes stay private'
             )
         },
         [ordered]@{
@@ -168,7 +170,9 @@ $manifest = [ordered]@{
                 '50 Built-in Regional Recipes',
                 'Ingredient Match Engine',
                 'Guided Cook Mode',
-                'Tuckii Collaboration Link'
+                'Tuckii Collaboration Link',
+                'Persistent imported recipe drafts',
+                'Source provenance and duplicate-import protection'
             )
         },
         [ordered]@{
@@ -247,6 +251,7 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
   - Every update verified: manifest signature, SHA-256 and APK signing certificate.
   - Signed update manifests — a compromised repository cannot redirect installs.
   - 100% in-app video downloader, instant search, batch undo.
+  - Scoped Matbakhi collaboration collection with stable record identity; private notes are not shared.
 
 ---
 
@@ -284,9 +289,11 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 - **SHA-256 Checksum:** `__KITCHEN_SHA__`
 - **Highlights:**
   - 100% offline, Arabic-only, RTL-first — no accounts, no network permission at all.
-  - 20+ built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
+  - 50 built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
   - "ماذا أطبخ؟" ingredient-match engine and a guided cook mode that updates the pantry
     and shopping list automatically.
+  - Tuckii imports become persistent, editable drafts with source provenance and duplicate protection.
+    User approval remains controlled by Tuckii.
   - Signed update manifests and APK signer pinning like every other app in the suite.
 
 ---

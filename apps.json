@@ -29,10 +29,10 @@
       "name": "Tuckii",
       "tagline": "Offline-First Bookmark & Media Manager",
       "description": "High-speed social video downloader, offline reader, and neo-brutalist bookmark shelf with zero external exits.",
-      "version": "1.5.0",
-      "version_code": 24,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.0/Tuckii.apk",
-      "sha256": "177ce8f894c046a6470a721ce37bcf4e7cbda9f9eaa5c6c1c14b2f434169aec7",
+      "version": "1.6.0",
+      "version_code": 25,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.6.0/Tuckii.apk",
+      "sha256": "2631b3bc5df1fc985e37854f205b8ee66e16a168d0460f826d64b037a7cba762",
       "category": "Media & Bookmarks",
       "accent_color": "#C96F4F",
       "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/tuckii.jpg",
@@ -43,7 +43,9 @@
         "Abood Labs Portal",
         "100% In-App Video Downloader",
         "Instant Search",
-        "Batch Undo Delete"
+        "Batch Undo Delete",
+        "Scoped Matbakhi collaboration collection",
+        "Stable bookmark IDs and private notes stay private"
       ]
     },
     {
@@ -76,10 +78,10 @@
       "name": "مطبخي | Matbakhi",
       "tagline": "Offline Pantry, Recipes & Cook-Along Companion",
       "description": "Fully offline Arabic kitchen companion with 50 built-in regional recipes, pantry tracking, ingredient matching, and guided cook mode.",
-      "version": "1.1.0",
-      "version_code": 2,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.1.0-kitchen/Matbakhi.apk",
-      "sha256": "cd12741f1e6f4c7e298c45817cddb49d38a0b46860939d5610b7e6840b3e4214",
+      "version": "1.2.0",
+      "version_code": 3,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.2.0-kitchen/Matbakhi.apk",
+      "sha256": "841841ad302d0a841e4fe739a73d0de1fb5e44c7bd31451dbe29174cbb9ddc0e",
       "category": "Kitchen & Recipes",
       "accent_color": "#0F372F",
       "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/matbakhi.png",
@@ -91,7 +93,9 @@
         "50 Built-in Regional Recipes",
         "Ingredient Match Engine",
         "Guided Cook Mode",
-        "Tuckii Collaboration Link"
+        "Tuckii Collaboration Link",
+        "Persistent imported recipe drafts",
+        "Source provenance and duplicate-import protection"
       ]
     },
     {
