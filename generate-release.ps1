@@ -105,7 +105,7 @@ $manifest = [ordered]@{
             package_name  = 'com.tuckai.app'
             name          = 'Tuckii'
             tagline       = 'Offline-First Bookmark & Media Manager'
-            description   = 'High-speed social video downloader, offline reader, and neo-brutalist bookmark shelf with zero external exits.'
+            description   = 'Local-first bookmark manager and offline reader with optional video downloads that send selected URLs to third-party resolvers.'
             version       = $TuckiiVersion
             version_code  = $TuckiiCode
             download_url  = "$base/v$TuckiiVersion/Tuckii.apk"
@@ -154,7 +154,7 @@ $manifest = [ordered]@{
             package_name  = 'com.tuckai.kitchen'
             name          = 'مطبخي | Matbakhi'
             tagline       = 'Offline Pantry, Recipes & Cook-Along Companion'
-            description   = 'Fully offline Arabic kitchen companion with 50 built-in regional recipes, pantry tracking, ingredient matching, and guided cook mode.'
+            description   = 'Local-first Arabic kitchen companion with 50 built-in regional recipes, pantry tracking, ingredient matching, and guided cook mode. Internet access supports signed updates and APK downloads; there are no accounts or app backend.'
             version       = $KitchenVersion
             version_code  = $KitchenCode
             download_url  = "$base/v$KitchenVersion-kitchen/Matbakhi.apk"
@@ -166,7 +166,7 @@ $manifest = [ordered]@{
             features      = @(
                 'Signed Update Manifests',
                 'Signed APK Verification',
-                '100% Offline, No Accounts',
+                'Pantry and recipe data stays on device; no accounts or app backend',
                 '50 Built-in Regional Recipes',
                 'Ingredient Match Engine',
                 'Guided Cook Mode',
@@ -251,6 +251,7 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
   - Every update verified: manifest signature, SHA-256 and APK signing certificate.
   - Signed update manifests — a compromised repository cannot redirect installs.
   - 100% in-app video downloader, instant search, batch undo.
+  - Bookmarks stay on device. Saving links contacts their pages and metadata providers; optional video downloads send the selected URL to external resolver services unaffiliated with Tuckii.
   - Scoped Matbakhi collaboration collection with stable record identity; private notes are not shared.
 
 ---
@@ -288,7 +289,7 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 - **Build:** `versionCode __KITCHEN_CODE__`
 - **SHA-256 Checksum:** `__KITCHEN_SHA__`
 - **Highlights:**
-  - 100% offline, Arabic-only, RTL-first — no accounts, no network permission at all.
+  - Local-first, Arabic-only, RTL-first, with no accounts or app backend. Internet access is used for signed update checks and APK downloads; pantry and recipe data stays on the device.
   - 50 built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
   - "ماذا أطبخ؟" ingredient-match engine and a guided cook mode that updates the pantry
     and shopping list automatically.
