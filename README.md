@@ -19,6 +19,7 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
   - Every update verified: manifest signature, SHA-256 and APK signing certificate.
   - Signed update manifests — a compromised repository cannot redirect installs.
   - 100% in-app video downloader, instant search, batch undo.
+  - Bookmarks stay on device. Saving links contacts their pages and metadata providers; optional video downloads send the selected URL to external resolver services unaffiliated with Tuckii.
   - Scoped Matbakhi collaboration collection with stable record identity; private notes are not shared.
 
 ---
@@ -56,7 +57,7 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 - **Build:** `versionCode 4`
 - **SHA-256 Checksum:** `9ad59f6779a1f425ae844043e7a9cde9d92f33b85d5e8784ae3c374813628fa4`
 - **Highlights:**
-  - 100% offline, Arabic-only, RTL-first — no accounts, no network permission at all.
+  - Local-first, Arabic-only, RTL-first, with no accounts or app backend. Internet access is used for signed update checks and APK downloads; pantry and recipe data stays on the device.
   - 50 built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
   - "ماذا أطبخ؟" ingredient-match engine and a guided cook mode that updates the pantry
     and shopping list automatically.
@@ -75,6 +76,19 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 - Curated Quran passages and Quranic supplications; no hadith or tafsir section.
 - **Beta:** content checks are automated and are not scholarly approval; qualified review is still pending.
 
+---
+
+### 6. 🩺 medicalWay — Study Companion for Medical Students (v1.0.0)
+- **[Download MedicalWay.apk (v1.0.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-medicalway/MedicalWay.apk)**
+- **Package ID:** `com.tuckai.medicalway`
+- **Build:** `versionCode 1`
+- **SHA-256 Checksum:** `f32e095ce6d87d1deaac644814a2c1defd04e39dbe53676511561d6c99603327`
+- **Highlights:**
+  - Stylus-first PDF lecture notes: pressure pen, highlighter, palm rejection, draw-and-hold lines, bookmarks, search, annotated export.
+  - Record lectures while writing; tap any note to hear that moment, or replay notes in sync with the audio.
+  - Optional AI tutor (Google Gemini with the user's own key) maps what the lecturer explained to each slide, and builds flashcards and MCQs.
+  - FSRS flashcards with image occlusion, tutor and timed exam modes, focus timer, backup and restore.
+  - Data stays on the device; internet is used only for the optional AI tutor and signed update checks.
 ---
 
 *All applications are signed with the shared ecosystem key for trusted in-app cross-installation.

@@ -36,6 +36,10 @@ param(
     [string] $MinhajVersion = '1.0.0',
     [int] $MinhajCode = 1,
 
+    [switch] $PublishMedicalWay,
+    [string] $MedicalWayVersion = '1.0.0',
+    [int] $MedicalWayCode = 1,
+
     [string] $Notes = 'Bug fixes and stability improvements.'
 )
 
@@ -58,6 +62,10 @@ $shaMinhaj = ''
 if ($PublishMinhaj) {
     $shaMinhaj = Get-Sha256 (Join-Path $RepositoryPath 'Minhaj.apk')
 }
+$shaMedicalWay = ''
+if ($PublishMedicalWay) {
+    $shaMedicalWay = Get-Sha256 (Join-Path $RepositoryPath 'MedicalWay.apk')
+}
 
 Write-Output 'Hashes read from disk:'
 Write-Output "  AboodLabs.apk  $shaHub"
@@ -65,6 +73,7 @@ Write-Output "  Tuckii.apk     $shaTuckii"
 Write-Output "  Aman.apk       $shaAman"
 Write-Output "  Matbakhi.apk   $shaKitchen"
 if ($PublishMinhaj) { Write-Output "  Minhaj.apk     $shaMinhaj" }
+if ($PublishMedicalWay) { Write-Output "  MedicalWay.apk $shaMedicalWay" }
 Write-Output ''
 
 $versionJson = [ordered]@{
@@ -81,7 +90,7 @@ $manifest = [ordered]@{
         package_name  = 'com.tuckai.hub'
         name          = 'Abood Labs'
         tagline       = 'Central Ecosystem Portal & Suite Launcher'
-        description   = 'The creative studio hub connecting Tuckii, Aman, Matbakhi, and Minhaj. Every ecosystem update is cryptographically signed.'
+        description   = if ($PublishMedicalWay) { 'The creative studio hub connecting Tuckii, Aman, Matbakhi, Minhaj, and medicalWay. Every ecosystem update is cryptographically signed.' } else { 'The creative studio hub connecting Tuckii, Aman, Matbakhi, and Minhaj. Every ecosystem update is cryptographically signed.' }
         version       = $HubVersion
         version_code  = $HubCode
         download_url  = "$base/v$HubVersion-hub/AboodLabs.apk"
@@ -190,6 +199,36 @@ $manifest = [ordered]@{
             logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/minhaj.png'
             status        = if ($PublishMinhaj) { 'beta' } else { 'coming_soon' }
             features      = @('قراءة دون اتصال', 'المصحف الورقي', 'آيات وأدعية من القرآن', 'استماع وتذكير يومي')
+        }
+    )
+}
+
+if ($PublishMedicalWay) {
+    $manifest['apps'] = @($manifest['apps']) + @(
+        [ordered]@{
+            id            = 'medicalway'
+            package_name  = 'com.tuckai.medicalway'
+            name          = 'medicalWay'
+            tagline       = 'Study Companion for Medical Students'
+            description   = 'Stylus-first lecture notes on PDFs, lecture recording synced to handwriting, an AI tutor that maps what the lecturer explained to each slide, FSRS flashcards with image occlusion, and timed MCQ exams. Data stays on the device; internet is used only for the optional Gemini AI tutor (with the user''s own key) and signed update checks.'
+            version       = $MedicalWayVersion
+            version_code  = $MedicalWayCode
+            download_url  = "$base/v$MedicalWayVersion-medicalway/MedicalWay.apk"
+            sha256        = $shaMedicalWay
+            category      = 'Medical Education'
+            accent_color  = '#7F00FF'
+            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/medicalway.png'
+            status        = 'ready'
+            features      = @(
+                'Signed Update Manifests',
+                'Signed APK Verification',
+                'Stylus notes with palm rejection',
+                'Recording synced to handwriting',
+                'AI lecture tutor (Gemini, own key)',
+                'FSRS flashcards & image occlusion',
+                'Timed MCQ exam mode',
+                'Phone & tablet layouts'
+            )
         }
     )
 }
@@ -308,7 +347,7 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 - Curated Quran passages and Quranic supplications; no hadith or tafsir section.
 - **Beta:** content checks are automated and are not scholarly approval; qualified review is still pending.
 
----
+__MEDICALWAY_SECTION__---
 
 *All applications are signed with the shared ecosystem key for trusted in-app cross-installation.
 Manifest checksums are computed from the APKs by `generate-release.ps1` — never edited by hand.*
@@ -317,6 +356,28 @@ Manifest checksums are computed from the APKs by `generate-release.ps1` — neve
 $minhajUrl = if ($PublishMinhaj) { "$base/v$MinhajVersion-minhaj-beta/Minhaj.apk" } else { '#' }
 $minhajState = if ($PublishMinhaj) { 'public beta' } else { 'preview' }
 $readme = $readme.Replace('__TUCKII_VER__', $TuckiiVersion).Replace('__TUCKII_CODE__', [string] $TuckiiCode).Replace('__TUCKII_SHA__', $shaTuckii).Replace('__HUB_VER__', $HubVersion).Replace('__HUB_CODE__', [string] $HubCode).Replace('__HUB_SHA__', $shaHub).Replace('__AMAN_VER__', $AmanVersion).Replace('__AMAN_CODE__', [string] $AmanCode).Replace('__AMAN_SHA__', $shaAman).Replace('__KITCHEN_VER__', $KitchenVersion).Replace('__KITCHEN_CODE__', [string] $KitchenCode).Replace('__KITCHEN_SHA__', $shaKitchen).Replace('__MINHAJ_STATE__', $minhajState).Replace('__MINHAJ_VER__', $MinhajVersion).Replace('__MINHAJ_CODE__', [string] $MinhajCode).Replace('__MINHAJ_SHA__', $shaMinhaj).Replace('__MINHAJ_URL__', $minhajUrl)
+
+$medicalWaySection = ''
+if ($PublishMedicalWay) {
+    $medicalWaySection = @'
+---
+
+### 6. 🩺 medicalWay — Study Companion for Medical Students (v__MW_VER__)
+- **[Download MedicalWay.apk (v__MW_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__MW_VER__-medicalway/MedicalWay.apk)**
+- **Package ID:** `com.tuckai.medicalway`
+- **Build:** `versionCode __MW_CODE__`
+- **SHA-256 Checksum:** `__MW_SHA__`
+- **Highlights:**
+  - Stylus-first PDF lecture notes: pressure pen, highlighter, palm rejection, draw-and-hold lines, bookmarks, search, annotated export.
+  - Record lectures while writing; tap any note to hear that moment, or replay notes in sync with the audio.
+  - Optional AI tutor (Google Gemini with the user's own key) maps what the lecturer explained to each slide, and builds flashcards and MCQs.
+  - FSRS flashcards with image occlusion, tutor and timed exam modes, focus timer, backup and restore.
+  - Data stays on the device; internet is used only for the optional AI tutor and signed update checks.
+
+'@
+    $medicalWaySection = $medicalWaySection.Replace('__MW_VER__', $MedicalWayVersion).Replace('__MW_CODE__', [string] $MedicalWayCode).Replace('__MW_SHA__', $shaMedicalWay)
+}
+$readme = $readme.Replace('__MEDICALWAY_SECTION__', $medicalWaySection)
 
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'README.md'),
