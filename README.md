@@ -78,18 +78,5 @@ Official public distribution repository for the **Abood Labs** ecosystem suite o
 
 ---
 
-### 6. 🩺 medicalWay — Study Companion for Medical Students (v1.0.0)
-- **[Download MedicalWay.apk (v1.0.0)](https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-medicalway/MedicalWay.apk)**
-- **Package ID:** `com.tuckai.medicalway`
-- **Build:** `versionCode 1`
-- **SHA-256 Checksum:** `f32e095ce6d87d1deaac644814a2c1defd04e39dbe53676511561d6c99603327`
-- **Highlights:**
-  - Stylus-first PDF lecture notes: pressure pen, highlighter, palm rejection, draw-and-hold lines, bookmarks, search, annotated export.
-  - Record lectures while writing; tap any note to hear that moment, or replay notes in sync with the audio.
-  - Optional AI tutor (Google Gemini with the user's own key) maps what the lecturer explained to each slide, and builds flashcards and MCQs.
-  - FSRS flashcards with image occlusion, tutor and timed exam modes, focus timer, backup and restore.
-  - Data stays on the device; internet is used only for the optional AI tutor and signed update checks.
----
-
 *All applications are signed with the shared ecosystem key for trusted in-app cross-installation.
 Manifest checksums are computed from the APKs by `generate-release.ps1` — never edited by hand.*

@@ -4,7 +4,7 @@
     "package_name": "com.tuckai.hub",
     "name": "Abood Labs",
     "tagline": "Central Ecosystem Portal & Suite Launcher",
-    "description": "The creative studio hub connecting Tuckii, Aman, Matbakhi, Minhaj, and medicalWay. Every ecosystem update is cryptographically signed.",
+    "description": "The creative studio hub connecting Tuckii, Aman, Matbakhi, and Minhaj. Every ecosystem update is cryptographically signed.",
     "version": "1.4.2",
     "version_code": 10,
     "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.4.2-hub/AboodLabs.apk",
@@ -117,31 +117,6 @@
         "المصحف الورقي",
         "آيات وأدعية من القرآن",
         "استماع وتذكير يومي"
-      ]
-    },
-    {
-      "id": "medicalway",
-      "package_name": "com.tuckai.medicalway",
-      "name": "medicalWay",
-      "tagline": "Study Companion for Medical Students",
-      "description": "Stylus-first lecture notes on PDFs, lecture recording synced to handwriting, an AI tutor that maps what the lecturer explained to each slide, FSRS flashcards with image occlusion, and timed MCQ exams. Data stays on the device; internet is used only for the optional Gemini AI tutor (with the user's own key) and signed update checks.",
-      "version": "1.0.0",
-      "version_code": 1,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.0.0-medicalway/MedicalWay.apk",
-      "sha256": "f32e095ce6d87d1deaac644814a2c1defd04e39dbe53676511561d6c99603327",
-      "category": "Medical Education",
-      "accent_color": "#7F00FF",
-      "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/medicalway.png",
-      "status": "ready",
-      "features": [
-        "Signed Update Manifests",
-        "Signed APK Verification",
-        "Stylus notes with palm rejection",
-        "Recording synced to handwriting",
-        "AI lecture tutor (Gemini, own key)",
-        "FSRS flashcards & image occlusion",
-        "Timed MCQ exam mode",
-        "Phone & tablet layouts"
       ]
     }
   ]
