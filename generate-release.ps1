@@ -37,11 +37,28 @@ param(
     [int] $MinhajCode = 1,
 
     [switch] $PublishMedicalWay,
-    [string] $MedicalWayVersion = '1.0.0',
-    [int] $MedicalWayCode = 1,
+    [string] $MedicalWayVersion = '0.0.1',
+    [int] $MedicalWayCode = 5,
+    # alpha | beta | ready
+    [string] $MedicalWayStage = 'alpha',
+
+    # Date shown as "Updated" for the apps released in this run (the Hub and medicalWay).
+    [string] $ReleaseDate = (Get-Date -Format 'yyyy-MM-dd'),
 
     [string] $Notes = 'Bug fixes and stability improvements.'
 )
+
+# ---------------------------------------------------------------------------------------------
+# Version numbers (every Abood Labs app): MAJOR.MINOR.PATCH
+#   PATCH  (1.2.3 -> 1.2.4)  only bug fixes
+#   MINOR  (1.2.4 -> 1.3.0)  new features that don't change how the app is used
+#   MAJOR  (1.3.0 -> 2.0.0)  big changes: redesign, removed features, anything that breaks old habits
+#   0.x.y means "not finished yet": status 'alpha' (early) or 'beta' (nearly ready).
+#   version_code must go up by at least 1 with EVERY release, or phones will not see the update.
+# ---------------------------------------------------------------------------------------------
+#
+# Store texts: plain English that anyone can read. Taglines under 40 characters, descriptions one or two
+# short sentences, features 2-6 words each. Say what the app does for the person, not how it is built.
 
 $ErrorActionPreference = 'Stop'
 
@@ -84,155 +101,151 @@ $versionJson = [ordered]@{
     sha256       = $shaTuckii
 }
 
+function Get-Size([string] $Name) { return (Get-Item -LiteralPath (Join-Path $RepositoryPath $Name)).Length }
+$logos = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos'
+
 $manifest = [ordered]@{
     hub  = [ordered]@{
         id            = 'hub'
         package_name  = 'com.tuckai.hub'
         name          = 'Abood Labs'
-        tagline       = 'Central Ecosystem Portal & Suite Launcher'
-        description   = if ($PublishMedicalWay) { 'The creative studio hub connecting Tuckii, Aman, Matbakhi, Minhaj, and medicalWay. Every ecosystem update is cryptographically signed.' } else { 'The creative studio hub connecting Tuckii, Aman, Matbakhi, and Minhaj. Every ecosystem update is cryptographically signed.' }
+        tagline       = 'Get and update every Abood Labs app'
+        description   = 'One place to install Abood Labs apps and keep them up to date. Every download is checked before it installs.'
         version       = $HubVersion
         version_code  = $HubCode
         download_url  = "$base/v$HubVersion-hub/AboodLabs.apk"
         sha256        = $shaHub
-        category      = 'Ecosystem Portal'
+        category      = 'Tools'
         accent_color  = '#2E3AF2'
-        logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/abood-labs.png'
+        logo_url      = "$logos/abood-labs.png"
         status        = 'ready'
-        features      = @(
-            'Signed Update Manifests',
-            'Signed APK Verification',
-            'Suite Launcher',
-            'Automatic Startup Updater',
-            'Keystore Shield',
-            'Deep Linking'
-        )
+        size_bytes    = Get-Size 'AboodLabs.apk'
+        updated       = $ReleaseDate
+        min_android   = '8.0'
+        language      = 'English'
+        whats_new     = 'A new store look: clear app pages with screenshots, one-tap updates, and the app list keeps working offline.'
+        privacy       = 'Only downloads the app list and the apps you choose. No account, no tracking.'
+        features      = @('All Abood Labs apps in one place', 'Updates you can trust', 'Works offline with the saved list')
     }
     apps = @(
         [ordered]@{
             id            = 'tuckii'
             package_name  = 'com.tuckai.app'
             name          = 'Tuckii'
-            tagline       = 'Offline-First Bookmark & Media Manager'
-            description   = 'Local-first bookmark manager and offline reader with optional video downloads that send selected URLs to third-party resolvers.'
+            tagline       = 'Save links and read them later'
+            description   = 'Keep links, articles and videos in one tidy place and read them later, even without internet.'
             version       = $TuckiiVersion
             version_code  = $TuckiiCode
             download_url  = "$base/v$TuckiiVersion/Tuckii.apk"
             sha256        = $shaTuckii
-            category      = 'Media & Bookmarks'
+            category      = 'Reading'
             accent_color  = '#C96F4F'
-            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/tuckii.jpg'
+            logo_url      = "$logos/tuckii.jpg"
             status        = 'ready'
-            features      = @(
-                'Signed Update Manifests',
-                'Signed APK Verification',
-                'Abood Labs Portal',
-                '100% In-App Video Downloader',
-                'Instant Search',
-                'Batch Undo Delete',
-                'Scoped Matbakhi collaboration collection',
-                'Stable bookmark IDs and private notes stay private'
-            )
+            size_bytes    = Get-Size 'Tuckii.apk'
+            min_android   = '8.0'
+            language      = 'English'
+            privacy       = 'Your bookmarks stay on your phone. Saving a link opens that page to read its title. Optional video downloads send the link to outside services.'
+            features      = @('Read saved pages offline', 'Fast search', 'Collections', 'Undo if you delete by mistake')
         },
         [ordered]@{
             id            = 'aman'
             package_name  = 'com.iraq.emergency.guide'
-            name          = 'Aman | أمان'
-            tagline       = 'Emergency Guide & Rapid Safety Response'
-            description   = 'Complete emergency guide for Iraq: 911 SOS, first aid rescue, anti-extortion center, civil defense, and emergency numbers.'
+            name          = 'Aman'
+            name_local    = 'أمان'
+            tagline       = 'Emergency help for Iraq'
+            description   = 'Call for help fast, find every emergency number in Iraq, and follow first-aid steps that work without internet.'
             version       = $AmanVersion
             version_code  = $AmanCode
             download_url  = "$base/v$AmanVersion-aman/Aman.apk"
             sha256        = $shaAman
-            category      = 'Emergency & Safety'
+            category      = 'Safety'
             accent_color  = '#FB3640'
-            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/aman.png'
+            logo_url      = "$logos/aman.png"
             status        = 'ready'
-            features      = @(
-                'Signed Update Manifests',
-                'Signed APK Verification',
-                '911 Instant SOS',
-                'Offline First Aid',
-                'Anti-Extortion Center',
-                'GPS Location Dispatcher',
-                'Abood Labs Hub Integration'
-            )
+            size_bytes    = Get-Size 'Aman.apk'
+            min_android   = '7.0'
+            language      = 'Arabic'
+            features      = @('One-tap SOS call', 'First aid that works offline', 'All emergency numbers', 'Help with online blackmail')
         },
         [ordered]@{
             id            = 'kitchen'
             package_name  = 'com.tuckai.kitchen'
-            name          = 'مطبخي | Matbakhi'
-            tagline       = 'Offline Pantry, Recipes & Cook-Along Companion'
-            description   = 'Local-first Arabic kitchen companion with 50 built-in regional recipes, pantry tracking, ingredient matching, and guided cook mode. Internet access supports signed updates and APK downloads; there are no accounts or app backend.'
+            name          = 'Matbakhi'
+            name_local    = 'مطبخي'
+            tagline       = 'What can I cook today?'
+            description   = '50 Iraqi recipes, a pantry and shopping list, and step-by-step cooking. It suggests dishes from what you already have.'
             version       = $KitchenVersion
             version_code  = $KitchenCode
             download_url  = "$base/v$KitchenVersion-kitchen/Matbakhi.apk"
             sha256        = $shaKitchen
-            category      = 'Kitchen & Recipes'
+            category      = 'Food & cooking'
             accent_color  = '#0F372F'
-            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/matbakhi.png'
+            logo_url      = "$logos/matbakhi.png"
             status        = 'ready'
-            features      = @(
-                'Signed Update Manifests',
-                'Signed APK Verification',
-                'Pantry and recipe data stays on device; no accounts or app backend',
-                '50 Built-in Regional Recipes',
-                'Ingredient Match Engine',
-                'Guided Cook Mode',
-                'Tuckii Collaboration Link',
-                'Persistent imported recipe drafts',
-                'Source provenance and duplicate-import protection'
-            )
+            size_bytes    = Get-Size 'Matbakhi.apk'
+            min_android   = '8.0'
+            language      = 'Arabic'
+            privacy       = 'No account. Your recipes and pantry stay on your phone; the internet is only used for updates.'
+            features      = @('50 Iraqi recipes', 'Ideas from what you have', 'Pantry and shopping list', 'Step-by-step cooking')
         },
         [ordered]@{
             id            = 'minhaj'
             package_name  = 'com.tuckai.minhaj'
-            name          = 'منهاج'
-            tagline       = 'رفيق القرآن الكريم والمسار اليومي'
-            description   = 'قراءة القرآن، آيات وأدعية قرآنية مختارة، الاستماع، ومتابعة التقدم داخل التطبيق أو من المصحف الورقي.'
+            name          = 'Minhaj'
+            name_local    = 'منهاج'
+            tagline       = 'Read the Quran every day'
+            description   = 'Read and listen to the Quran, set a daily goal and track your progress, in the app or with your own printed Mushaf. Beta: the text checks are automatic; a scholar''s review is still pending.'
             version       = $MinhajVersion
             version_code  = $MinhajCode
             download_url  = if ($PublishMinhaj) { "$base/v$MinhajVersion-minhaj-beta/Minhaj.apk" } else { '' }
             sha256        = $shaMinhaj
-            category      = 'القرآن الكريم'
+            category      = 'Quran'
             accent_color  = '#0D4B3D'
-            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/minhaj.png'
+            logo_url      = "$logos/minhaj.png"
             status        = if ($PublishMinhaj) { 'beta' } else { 'coming_soon' }
-            features      = @('قراءة دون اتصال', 'المصحف الورقي', 'آيات وأدعية من القرآن', 'استماع وتذكير يومي')
+            min_android   = '8.0'
+            language      = 'Arabic'
+            features      = @('Read without internet', 'Listen to recitations', 'Daily goal and reminder', 'Track your printed Mushaf')
         }
     )
 }
+if ($PublishMinhaj) { $manifest['apps'][3]['size_bytes'] = Get-Size 'Minhaj.apk' }
 
 if ($PublishMedicalWay) {
-    $manifest['apps'] = @($manifest['apps']) + @(
+    # Newest app first, shown as the store's featured app.
+    $manifest['apps'] = @(
         [ordered]@{
             id            = 'medicalway'
             package_name  = 'com.tuckai.medicalway'
             name          = 'medicalWay'
-            tagline       = 'Study Companion for Medical Students'
-            description   = 'Stylus-first lecture notes on PDFs, lecture recording synced to handwriting, an AI tutor that maps what the lecturer explained to each slide, FSRS flashcards with image occlusion, and timed MCQ exams. Data stays on the device; internet is used only for the optional Gemini AI tutor (with the user''s own key) and signed update checks.'
+            tagline       = 'Study medicine the smart way'
+            description   = 'Write on your lecture slides, record the lecture, and turn it into flashcards and quizzes. Clinical calculators, lab values and more, on your phone or tablet, even offline.'
             version       = $MedicalWayVersion
             version_code  = $MedicalWayCode
             download_url  = "$base/v$MedicalWayVersion-medicalway/MedicalWay.apk"
             sha256        = $shaMedicalWay
-            category      = 'Medical Education'
-            accent_color  = '#7F00FF'
-            logo_url      = 'https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/medicalway.png'
-            status        = 'ready'
+            category      = 'Education'
+            accent_color  = '#7B00FF'
+            logo_url      = "$logos/medicalway.png"
+            status        = $MedicalWayStage
+            featured      = $true
+            size_bytes    = Get-Size 'MedicalWay.apk'
+            updated       = $ReleaseDate
+            min_android   = '8.0'
+            language      = 'English'
+            whats_new     = 'First alpha. Things may change, and your feedback shapes the app: Settings, then Send feedback.'
+            privacy       = 'Your notes stay on your device. Only what you choose leaves it: the AI tutor (with your own key), feedback you send, and your Google email and name if you sign in.'
             features      = @(
-                'Signed Update Manifests',
-                'Signed APK Verification',
-                'Stylus notes with palm rejection',
-                'Recording synced to handwriting',
-                'AI lecture tutor (Gemini, own key)',
-                'FSRS flashcards & image occlusion',
-                'Timed MCQ exam mode',
-                'Phone & tablet layouts'
+                'Write on PDF, PowerPoint and Word slides',
+                'Record lectures while you write',
+                'Flashcards and practice quizzes',
+                'Calculators, lab values and mnemonics',
+                'Optional AI tutor'
             )
         }
-    )
+    ) + @($manifest['apps'])
 }
-
 # Manifests MUST be written with LF line endings.
 # `.gitattributes` normalises version.json / apps.json / *.sig to LF, so signing CRLF bytes
 # produces a signature that does NOT match the file GitHub actually serves — which silently
@@ -269,88 +282,61 @@ foreach ($name in @('version.json', 'apps.json')) {
 # Placeholders are used (not interpolation) so the markdown backticks survive PowerShell's
 # escape rules. Every hash comes from Get-FileHash above — never typed by hand.
 $readme = @'
-# ⚡ Abood Labs — Official Android Releases
+# Abood Labs — official Android apps
 
-Official public distribution repository for the **Abood Labs** ecosystem suite of Android applications.
+Download the apps here, or get them all (and their updates) in the **Abood Labs** app.
 
-> Every `*.apk` here is signed with the unified ecosystem key, and `version.json` / `apps.json`
-> are published with detached ECDSA P-256 signatures (`*.sig`). Installed apps verify the
-> signature, the SHA-256 checksum **and** the APK's signing certificate before installing.
-> Regenerate this file with `.\generate-release.ps1` — never edit hashes by hand.
+> **Safe by design.** Every app is signed with the official Abood Labs key, and the app list
+> (`apps.json`) is signed too. Before anything installs, the apps check the list's signature, the
+> file's SHA-256 checksum and the app's signing certificate. This file is written by
+> `.\generate-release.ps1` — checksums are never typed by hand.
+>
+> **Version numbers** follow MAJOR.MINOR.PATCH: a bug fix raises the last number (1.2.3 → 1.2.4),
+> a new feature raises the middle one (1.2.4 → 1.3.0), a big change raises the first (1.3.0 → 2.0.0).
+> Versions starting with 0 are not finished yet (alpha or beta).
+
+---
+__MEDICALWAY_SECTION__
+### Abood Labs — get and update every Abood Labs app (v__HUB_VER__)
+- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__HUB_VER__-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode __HUB_CODE__
+- SHA-256: `__HUB_SHA__`
+- One place to install Abood Labs apps and keep them up to date. Every download is checked before it installs.
 
 ---
 
-### 1. 🔖 Tuckii — Offline-First Media & Bookmark Manager (v__TUCKII_VER__)
-- **[Download Tuckii.apk (v__TUCKII_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__TUCKII_VER__/Tuckii.apk)**
-- **Package ID:** `com.tuckai.app`
-- **Build:** `versionCode __TUCKII_CODE__`
-- **SHA-256 Checksum:** `__TUCKII_SHA__`
-- **Highlights:**
-  - Update prompts restored for users on older builds (version-code driven detection).
-  - Every update verified: manifest signature, SHA-256 and APK signing certificate.
-  - Signed update manifests — a compromised repository cannot redirect installs.
-  - 100% in-app video downloader, instant search, batch undo.
-  - Bookmarks stay on device. Saving links contacts their pages and metadata providers; optional video downloads send the selected URL to external resolver services unaffiliated with Tuckii.
-  - Scoped Matbakhi collaboration collection with stable record identity; private notes are not shared.
+### Tuckii — save links and read them later (v__TUCKII_VER__)
+- **[Download Tuckii.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__TUCKII_VER__/Tuckii.apk)** · `com.tuckai.app` · versionCode __TUCKII_CODE__
+- SHA-256: `__TUCKII_SHA__`
+- Keep links, articles and videos in one tidy place and read them later, even without internet.
+- Your bookmarks stay on your phone. Saving a link opens that page to read its title. Optional video
+  downloads send the link to outside services that are not part of Abood Labs.
 
 ---
 
-### 2. 🚀 Abood Labs — Creative Studio Hub & Ecosystem Portal (v__HUB_VER__)
-- **[Download AboodLabs.apk (v__HUB_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__HUB_VER__-hub/AboodLabs.apk)**
-- **Package ID:** `com.tuckai.hub`
-- **Build:** `versionCode __HUB_CODE__`
-- **SHA-256 Checksum:** `__HUB_SHA__`
-- **Highlights:**
-  - Signature-verified suite manifest; installs pinned to the official certificate.
-  - Suite launcher with automatic startup update checks for all ecosystem apps.
-  - Native launch and 1-tap in-app install for available suite apps.
-  - Horizontal, tap-to-enlarge screenshots captured from the Android emulator.
-  - Full-width Arabic app names stay on one line without clipping.
+### Aman (أمان) — emergency help for Iraq (v__AMAN_VER__)
+- **[Download Aman.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__AMAN_VER__-aman/Aman.apk)** · `com.iraq.emergency.guide` · versionCode __AMAN_CODE__
+- SHA-256: `__AMAN_SHA__`
+- Call for help fast, find every emergency number in Iraq, and follow first-aid steps that work without internet. In Arabic.
 
 ---
 
-### 3. 🚨 Aman | أمان — Emergency Guide & Rapid Safety Response (v__AMAN_VER__)
-- **[Download Aman.apk (v__AMAN_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__AMAN_VER__-aman/Aman.apk)**
-- **Package ID:** `com.iraq.emergency.guide`
-- **Build:** `versionCode __AMAN_CODE__`
-- **SHA-256 Checksum:** `__AMAN_SHA__`
-- **Highlights:**
-  - Update manifest verified natively before the JavaScript layer is trusted.
-  - 911 Instant SOS and complete unified Iraqi emergency directory.
-  - 100% offline first aid protocols and anti-extortion dispatch.
-  - In-app OTA update checker querying the Abood Labs distribution channel.
+### Matbakhi (مطبخي) — what can I cook today? (v__KITCHEN_VER__)
+- **[Download Matbakhi.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__KITCHEN_VER__-kitchen/Matbakhi.apk)** · `com.tuckai.kitchen` · versionCode __KITCHEN_CODE__
+- SHA-256: `__KITCHEN_SHA__`
+- 50 Iraqi recipes, a pantry and shopping list, and step-by-step cooking. In Arabic, no account;
+  the internet is only used for updates.
 
 ---
 
-### 4. 🍲 مطبخي (Matbakhi) — Offline Pantry, Recipes & Cook-Along Companion (v__KITCHEN_VER__)
-- **[Download Matbakhi.apk (v__KITCHEN_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__KITCHEN_VER__-kitchen/Matbakhi.apk)**
-- **Package ID:** `com.tuckai.kitchen`
-- **Build:** `versionCode __KITCHEN_CODE__`
-- **SHA-256 Checksum:** `__KITCHEN_SHA__`
-- **Highlights:**
-  - Local-first, Arabic-only, RTL-first, with no accounts or app backend. Internet access is used for signed update checks and APK downloads; pantry and recipe data stays on the device.
-  - 50 built-in Iraqi recipes with real ingredients and steps, plus a full recipe builder.
-  - "ماذا أطبخ؟" ingredient-match engine and a guided cook mode that updates the pantry
-    and shopping list automatically.
-  - Tuckii imports become persistent, editable drafts with source provenance and duplicate protection.
-    User approval remains controlled by Tuckii.
-  - Signed update manifests and APK signer pinning like every other app in the suite.
+### Minhaj (منهاج) — read the Quran every day (__MINHAJ_STATE__)
+- **[Download Minhaj.apk (v__MINHAJ_VER__)](__MINHAJ_URL__)** · `com.tuckai.minhaj` · versionCode __MINHAJ_CODE__
+- SHA-256: `__MINHAJ_SHA__`
+- Read and listen to the Quran, set a daily goal and track your progress, in the app or with your own printed Mushaf. In Arabic.
+- **Beta:** the text checks are automatic; a scholar's review is still pending.
 
 ---
 
-### 5. منهاج — Quran Companion (__MINHAJ_STATE__)
-- **[Download Minhaj.apk (v__MINHAJ_VER__)](__MINHAJ_URL__)**
-- **Package ID:** `com.tuckai.minhaj`
-- **Build:** `versionCode __MINHAJ_CODE__`
-- **SHA-256 Checksum:** `__MINHAJ_SHA__`
-- Arabic-first reading, listening and progress tracking for in-app or physical Mushaf use.
-- Curated Quran passages and Quranic supplications; no hadith or tafsir section.
-- **Beta:** content checks are automated and are not scholarly approval; qualified review is still pending.
-
-__MEDICALWAY_SECTION__---
-
-*All applications are signed with the shared ecosystem key for trusted in-app cross-installation.
-Manifest checksums are computed from the APKs by `generate-release.ps1` — never edited by hand.*
+*All apps are signed with the same official Abood Labs key, so they can install and update each other safely.*
 '@
 
 $minhajUrl = if ($PublishMinhaj) { "$base/v$MinhajVersion-minhaj-beta/Minhaj.apk" } else { '#' }
@@ -360,22 +346,20 @@ $readme = $readme.Replace('__TUCKII_VER__', $TuckiiVersion).Replace('__TUCKII_CO
 $medicalWaySection = ''
 if ($PublishMedicalWay) {
     $medicalWaySection = @'
+
+### medicalWay — study medicine the smart way (v__MW_VER__, __MW_STAGE__)
+- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__MW_VER__-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode __MW_CODE__
+- SHA-256: `__MW_SHA__`
+- Write on your lecture slides, record the lecture, and turn it into flashcards and quizzes. Clinical
+  calculators, lab values and more, on your phone or tablet, even offline.
+- Your notes stay on your device. Only what you choose leaves it: the AI tutor (with your own key),
+  feedback you send, and your Google email and name if you sign in.
+- **__MW_STAGE__:** an early version. Things may change and you may find bugs.
+
 ---
-
-### 6. 🩺 medicalWay — Study Companion for Medical Students (v__MW_VER__)
-- **[Download MedicalWay.apk (v__MW_VER__)](https://github.com/barry762vf/tuckii-releases/releases/download/v__MW_VER__-medicalway/MedicalWay.apk)**
-- **Package ID:** `com.tuckai.medicalway`
-- **Build:** `versionCode __MW_CODE__`
-- **SHA-256 Checksum:** `__MW_SHA__`
-- **Highlights:**
-  - Stylus-first PDF lecture notes: pressure pen, highlighter, palm rejection, draw-and-hold lines, bookmarks, search, annotated export.
-  - Record lectures while writing; tap any note to hear that moment, or replay notes in sync with the audio.
-  - Optional AI tutor (Google Gemini with the user's own key) maps what the lecturer explained to each slide, and builds flashcards and MCQs.
-  - FSRS flashcards with image occlusion, tutor and timed exam modes, focus timer, backup and restore.
-  - Data stays on the device; internet is used only for the optional AI tutor and signed update checks.
-
 '@
-    $medicalWaySection = $medicalWaySection.Replace('__MW_VER__', $MedicalWayVersion).Replace('__MW_CODE__', [string] $MedicalWayCode).Replace('__MW_SHA__', $shaMedicalWay)
+    $stage = (Get-Culture).TextInfo.ToTitleCase($MedicalWayStage)
+    $medicalWaySection = $medicalWaySection.Replace('__MW_VER__', $MedicalWayVersion).Replace('__MW_CODE__', [string] $MedicalWayCode).Replace('__MW_SHA__', $shaMedicalWay).Replace('__MW_STAGE__', $stage)
 }
 $readme = $readme.Replace('__MEDICALWAY_SECTION__', $medicalWaySection)
 

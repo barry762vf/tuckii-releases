@@ -1,3 +1,6 @@
 m.bin
 manifest_pub.der
 sig.bin
+
+# Over GitHub's 100 MB file limit: published only as a release download (the generator hashes it on disk)
+MedicalWay.apk
