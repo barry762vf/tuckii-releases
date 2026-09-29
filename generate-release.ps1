@@ -226,7 +226,7 @@ if ($PublishMedicalWay) {
             download_url  = "$base/v$MedicalWayVersion-medicalway/MedicalWay.apk"
             sha256        = $shaMedicalWay
             category      = 'Education'
-            accent_color  = '#7B00FF'
+            accent_color  = '#CB3534'
             logo_url      = "$logos/medicalway.png"
             status        = $MedicalWayStage
             featured      = $true
@@ -234,10 +234,12 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'First alpha. Things may change, and your feedback shapes the app: Settings, then Send feedback.'
-            privacy       = 'Your notes stay on your device. Only what you choose leaves it: the AI tutor (with your own key), feedback you send, and your Google email and name if you sign in.'
+            whats_new     = 'Daily review with a streak and reminders, sync between your phone and tablet, a new notebook toolbar with a laser and reading mode, and a fresh look. Open the app to see how each one works.'
+            privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
+                'Daily review with a streak',
+                'Sync between phone and tablet',
                 'Record lectures while you write',
                 'Flashcards and practice quizzes',
                 'Calculators, lab values and mnemonics',
@@ -352,8 +354,9 @@ if ($PublishMedicalWay) {
 - SHA-256: `__MW_SHA__`
 - Write on your lecture slides, record the lecture, and turn it into flashcards and quizzes. Clinical
   calculators, lab values and more, on your phone or tablet, even offline.
-- Your notes stay on your device. Only what you choose leaves it: the AI tutor (with your own key),
-  feedback you send, and your Google email and name if you sign in.
+- Daily review with a streak, and sync between your phone and tablet when you sign in with Google.
+- Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your
+  own account. PDFs, photos and recordings stay on the device. The AI tutor uses your own key.
 - **__MW_STAGE__:** an early version. Things may change and you may find bugs.
 
 ---
