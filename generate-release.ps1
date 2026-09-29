@@ -234,7 +234,7 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'Daily review with a streak and reminders, sync between your phone and tablet, a new notebook toolbar with a laser and reading mode, and a fresh look. Open the app to see how each one works.'
+            whats_new     = 'Stop a card from repeating, colourful reminders with Medi, and medicalWay AI Pro for more accurate review cards. Also in 0.1: daily review with a streak, sync between phone and tablet, a new notebook toolbar and a fresh look.'
             privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
