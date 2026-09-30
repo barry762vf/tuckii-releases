@@ -13,12 +13,12 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 
 ---
 
-### medicalWay — study medicine the smart way (v0.1.1, Alpha)
-- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.1.1-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode 7
-- SHA-256: `7ceca13a08f4095977d348fe4067b2762f7392c2cbdfb88f0927530b34f8bc19`
+### medicalWay — study medicine the smart way (v0.2.0, Alpha)
+- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.2.0-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode 8
+- SHA-256: `b536ab08ea51a7553648faf0bc470a21b92295644af9d7727068e6fcf4c04443`
 - Write on your lecture slides, record the lecture, and turn it into flashcards and quizzes. Clinical
   calculators, lab values and more, on your phone or tablet, even offline.
-- Daily review with a streak, and sync between your phone and tablet when you sign in with Google.
+- Spaced repetition with a streak, and sync between your phone and tablet when you sign in with Google.
 - Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your
   own account. PDFs, photos and recordings stay on the device. The AI tutor uses your own key.
 - **Alpha:** an early version. Things may change and you may find bugs.
