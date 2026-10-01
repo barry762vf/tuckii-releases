@@ -234,7 +234,7 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'AI study tasks run quietly in the background with a progress bar, saved translations for instant recall, add selections directly to spaced repetition without AI, Home shortcuts and pinned folders, smoother laser and reading mode stylus scroll, and open documents directly from other apps.'
+            whats_new     = 'Adaptive high refresh rate (up to 144Hz), GoodNotes & NoteWise notebook upgrades (3-finger redo, bookmark ribbon, slide scrubber), PDF table of contents drawer, instant startup update check & 1-tap dialog, external colored Duolingo-style notifications, and faster offline AI.'
             privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
