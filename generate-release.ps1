@@ -234,7 +234,7 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'Adaptive high refresh rate (up to 144Hz), GoodNotes & NoteWise notebook upgrades (3-finger redo, bookmark ribbon, slide scrubber), PDF table of contents drawer, instant startup update check & 1-tap dialog, external colored Duolingo-style notifications, and faster offline AI.'
+            whats_new     = 'The last big Alpha update. Notebooks open where you left off, bookmarks live on Home, and files from Telegram or your files app open every time. A notebook made for phones, a pages panel on tablets, a bigger toolbar, a home screen widget for spaced repetition, and a quieter Pomodoro in your notifications.'
             privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
