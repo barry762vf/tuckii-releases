@@ -234,7 +234,7 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'Pens you know: ballpoint, gel pen, fountain pen, fineliner, brush pen, marker, calligraphy pen and pencil, each one clearly different. A new pen picker shows them as real pens. Scribble to erase is now a pen option. This update also fixes some bugs.'
+            whats_new     = 'Pencils now write in your color, so switching pens no longer changes it. The app looks for updates by itself while you use it, with almost no data: every 6 hours on Wi-Fi, once a day on mobile data, and it asks before downloading on mobile data. This update also fixes some bugs.'
             privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
