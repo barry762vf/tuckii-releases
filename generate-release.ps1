@@ -234,7 +234,7 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'The home screen widget for spaced repetition now fits any size, from one cell to the whole screen. Small shows today''s number, wider shows the week, and taller lists the decks to study first and the days coming up.'
+            whats_new     = 'Writing feels like a real pen. Lines are whole from start to end, the pen follows your hand without trailing, and the page moves in any direction you drag it. Tap a color twice to change it, and the settings of every tool are redesigned to be easy to read.'
             privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
