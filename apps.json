@@ -58,36 +58,6 @@
       ]
     },
     {
-      "id": "engineerway",
-      "package_name": "com.tuckai.engineerway",
-      "name": "EngineerWay",
-      "tagline": "Engineering notes, the smart way",
-      "description": "Notebooks and study tools set up for your engineering major. Read and write on your PDF, PowerPoint and Word files, use a scientific calculator on the page, and revise with flashcards and quizzes, even offline.",
-      "version": "0.1.0",
-      "version_code": 1,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.1.0-engineerway/EngineerWay.apk",
-      "sha256": "3684c45d5cee808156e0c77e7b4b73e001ddcc1866da9b02dd933c3f92e8c7e4",
-      "category": "Education",
-      "accent_color": "#0066FF",
-      "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/engineerway.png",
-      "status": "beta",
-      "size_bytes": 155930356,
-      "updated": "2026-10-07",
-      "min_android": "8.0",
-      "language": "English",
-      "whats_new": "The first version: pick your major and get its calculators and formula sheets, a scientific calculator that floats over your notes, a reader for your documents, and notebooks with real pens.",
-      "privacy": "No account. Your notes stay on your device. Only what you choose leaves it: the optional AI tutor with your own key. The app also checks this list for updates.",
-      "features": [
-        "Tools for your engineering major",
-        "Scientific calculator on the page",
-        "Read and write on PDF, PowerPoint, Word",
-        "Engineering paper and real pens",
-        "Record lectures while you write",
-        "Flashcards and practice quizzes",
-        "Optional AI tutor"
-      ]
-    },
-    {
       "id": "tuckii",
       "package_name": "com.tuckai.app",
       "name": "Tuckii",
