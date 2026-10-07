@@ -42,6 +42,14 @@ param(
     # alpha | beta | ready
     [string] $MedicalWayStage = 'alpha',
 
+    [switch] $PublishEngineerWay,
+    [string] $EngineerWayVersion = '0.1.0',
+    [int] $EngineerWayCode = 1,
+    # alpha | beta | ready
+    [string] $EngineerWayStage = 'beta',
+    # Date shown as "Updated" for EngineerWay (its own, so releasing it does not change the other apps' dates).
+    [string] $EngineerWayDate = (Get-Date -Format 'yyyy-MM-dd'),
+
     # Date shown as "Updated" for the apps released in this run (the Hub and medicalWay).
     [string] $ReleaseDate = (Get-Date -Format 'yyyy-MM-dd'),
 
@@ -84,6 +92,11 @@ if ($PublishMedicalWay) {
     $shaMedicalWay = Get-Sha256 (Join-Path $RepositoryPath 'MedicalWay.apk')
 }
 
+$shaEngineerWay = ''
+if ($PublishEngineerWay) {
+    $shaEngineerWay = Get-Sha256 (Join-Path $RepositoryPath 'EngineerWay.apk')
+}
+
 Write-Output 'Hashes read from disk:'
 Write-Output "  AboodLabs.apk  $shaHub"
 Write-Output "  Tuckii.apk     $shaTuckii"
@@ -91,6 +104,7 @@ Write-Output "  Aman.apk       $shaAman"
 Write-Output "  Matbakhi.apk   $shaKitchen"
 if ($PublishMinhaj) { Write-Output "  Minhaj.apk     $shaMinhaj" }
 if ($PublishMedicalWay) { Write-Output "  MedicalWay.apk $shaMedicalWay" }
+if ($PublishEngineerWay) { Write-Output "  EngineerWay.apk $shaEngineerWay" }
 Write-Output ''
 
 $versionJson = [ordered]@{
@@ -248,6 +262,46 @@ if ($PublishMedicalWay) {
         }
     ) + @($manifest['apps'])
 }
+if ($PublishEngineerWay) {
+    $engineerWay = [ordered]@{
+        id            = 'engineerway'
+        package_name  = 'com.tuckai.engineerway'
+        name          = 'EngineerWay'
+        tagline       = 'Engineering notes, the smart way'
+        description   = 'Notebooks and study tools set up for your engineering major. Read and write on your PDF, PowerPoint and Word files, use a scientific calculator on the page, and revise with flashcards and quizzes, even offline.'
+        version       = $EngineerWayVersion
+        version_code  = $EngineerWayCode
+        download_url  = "$base/v$EngineerWayVersion-engineerway/EngineerWay.apk"
+        sha256        = $shaEngineerWay
+        category      = 'Education'
+        accent_color  = '#0066FF'
+        logo_url      = "$logos/engineerway.png"
+        status        = $EngineerWayStage
+        size_bytes    = Get-Size 'EngineerWay.apk'
+        updated       = $EngineerWayDate
+        min_android   = '8.0'
+        language      = 'English'
+        whats_new     = 'The first version: pick your major and get its calculators and formula sheets, a scientific calculator that floats over your notes, a reader for your documents, and notebooks with real pens.'
+        privacy       = 'No account. Your notes stay on your device. Only what you choose leaves it: the optional AI tutor with your own key. The app also checks this list for updates.'
+        features      = @(
+            'Tools for your engineering major',
+            'Scientific calculator on the page',
+            'Read and write on PDF, PowerPoint, Word',
+            'Engineering paper and real pens',
+            'Record lectures while you write',
+            'Flashcards and practice quizzes',
+            'Optional AI tutor'
+        )
+    }
+    # After the featured app (medicalWay, when it is listed first), before the rest.
+    $list = @($manifest['apps'])
+    if ($list.Count -gt 0 -and $list[0]['featured']) {
+        $manifest['apps'] = @($list[0], $engineerWay) + @($list | Select-Object -Skip 1)
+    }
+    else {
+        $manifest['apps'] = @($engineerWay) + $list
+    }
+}
 # Manifests MUST be written with LF line endings.
 # `.gitattributes` normalises version.json / apps.json / *.sig to LF, so signing CRLF bytes
 # produces a signature that does NOT match the file GitHub actually serves — which silently
@@ -298,7 +352,7 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 > Versions starting with 0 are not finished yet (alpha or beta).
 
 ---
-__MEDICALWAY_SECTION__
+__MEDICALWAY_SECTION____ENGINEERWAY_SECTION__
 ### Abood Labs — get and update every Abood Labs app (v__HUB_VER__)
 - **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__HUB_VER__-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode __HUB_CODE__
 - SHA-256: `__HUB_SHA__`
@@ -365,6 +419,25 @@ if ($PublishMedicalWay) {
     $medicalWaySection = $medicalWaySection.Replace('__MW_VER__', $MedicalWayVersion).Replace('__MW_CODE__', [string] $MedicalWayCode).Replace('__MW_SHA__', $shaMedicalWay).Replace('__MW_STAGE__', $stage)
 }
 $readme = $readme.Replace('__MEDICALWAY_SECTION__', $medicalWaySection)
+
+$engineerWaySection = ''
+if ($PublishEngineerWay) {
+    $engineerWaySection = @'
+
+### EngineerWay — engineering notes, the smart way (v__EW_VER__, __EW_STAGE__)
+- **[Download EngineerWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__EW_VER__-engineerway/EngineerWay.apk)** · `com.tuckai.engineerway` · versionCode __EW_CODE__
+- SHA-256: `__EW_SHA__`
+- Notebooks and study tools set up for your engineering major. Read and write on your PDF, PowerPoint
+  and Word files, use a scientific calculator on the page, and revise with flashcards and quizzes.
+- No account. Your notes stay on your device. The AI tutor is optional and uses your own key.
+- **__EW_STAGE__:** an early version. Things may change and you may find bugs.
+
+---
+'@
+    $ewStage = (Get-Culture).TextInfo.ToTitleCase($EngineerWayStage)
+    $engineerWaySection = $engineerWaySection.Replace('__EW_VER__', $EngineerWayVersion).Replace('__EW_CODE__', [string] $EngineerWayCode).Replace('__EW_SHA__', $shaEngineerWay).Replace('__EW_STAGE__', $ewStage)
+}
+$readme = $readme.Replace('__ENGINEERWAY_SECTION__', $engineerWaySection)
 
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'README.md'),

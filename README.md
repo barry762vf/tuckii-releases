@@ -24,6 +24,15 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 - **Alpha:** an early version. Things may change and you may find bugs.
 
 ---
+### EngineerWay — engineering notes, the smart way (v0.1.0, Beta)
+- **[Download EngineerWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.1.0-engineerway/EngineerWay.apk)** · `com.tuckai.engineerway` · versionCode 1
+- SHA-256: `3684c45d5cee808156e0c77e7b4b73e001ddcc1866da9b02dd933c3f92e8c7e4`
+- Notebooks and study tools set up for your engineering major. Read and write on your PDF, PowerPoint
+  and Word files, use a scientific calculator on the page, and revise with flashcards and quizzes.
+- No account. Your notes stay on your device. The AI tutor is optional and uses your own key.
+- **Beta:** an early version. Things may change and you may find bugs.
+
+---
 ### Abood Labs — get and update every Abood Labs app (v1.5.0)
 - **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.0-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 11
 - SHA-256: `0406ef7772af253fb461b0510b1c7997a4adbdcf37d4403d86927b24cce9df2e`
