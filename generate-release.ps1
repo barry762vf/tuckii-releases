@@ -137,7 +137,7 @@ $manifest = [ordered]@{
         updated       = $ReleaseDate
         min_android   = '8.0'
         language      = 'English'
-        whats_new     = 'A new store look: clear app pages with screenshots, one-tap updates, and the app list keeps working offline.'
+        whats_new     = 'New pictures of medicalWay, which is now a Beta with a new look.'
         privacy       = 'Only downloads the app list and the apps you choose. No account, no tracking.'
         features      = @('All Abood Labs apps in one place', 'Updates you can trust', 'Works offline with the saved list')
     }
@@ -248,7 +248,7 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'Pencils now write in your color, so switching pens no longer changes it. The app looks for updates by itself while you use it, with almost no data: every 6 hours on Wi-Fi, once a day on mobile data, and it asks before downloading on mobile data. This update also fixes some bugs.'
+            whats_new     = 'The Beta: a new look on every screen, a Home that shows your day, notebook tabs, a smarter lasso, an exam planner, new study tools, sharing decks with classmates, and What''s New in Arabic. This update also fixes some bugs.'
             privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
@@ -256,6 +256,7 @@ if ($PublishMedicalWay) {
                 'Sync between phone and tablet',
                 'Record lectures while you write',
                 'Flashcards and practice quizzes',
+                'Exam planner and a Home that shows your day',
                 'Calculators, lab values and mnemonics',
                 'Optional AI tutor'
             )

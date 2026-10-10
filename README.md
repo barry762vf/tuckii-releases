@@ -13,20 +13,20 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 
 ---
 
-### medicalWay — study medicine the smart way (v0.5.4, Alpha)
-- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.5.4-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode 15
-- SHA-256: `9c8785abce801d16da6a724841928339ebc498f5dbcc1e34677057ecbaa2dbf0`
+### medicalWay — study medicine the smart way (v0.6.1, Beta)
+- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.6.1-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode 17
+- SHA-256: `e22f16db066693f8cc14a242c8c58b42f38713716746c7dc5fa970e580e0f645`
 - Write on your lecture slides, record the lecture, and turn it into flashcards and quizzes. Clinical
   calculators, lab values and more, on your phone or tablet, even offline.
 - Spaced repetition with a streak, and sync between your phone and tablet when you sign in with Google.
 - Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your
   own account. PDFs, photos and recordings stay on the device. The AI tutor uses your own key.
-- **Alpha:** an early version. Things may change and you may find bugs.
+- **Beta:** an early version. Things may change and you may find bugs.
 
 ---
-### Abood Labs — get and update every Abood Labs app (v1.5.0)
-- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.0-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 11
-- SHA-256: `0406ef7772af253fb461b0510b1c7997a4adbdcf37d4403d86927b24cce9df2e`
+### Abood Labs — get and update every Abood Labs app (v1.5.1)
+- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.1-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 12
+- SHA-256: `69476ad4a242d8c89955ee66b42ff3df82d9913241246fb1a354e1e28a822533`
 - One place to install Abood Labs apps and keep them up to date. Every download is checked before it installs.
 
 ---
