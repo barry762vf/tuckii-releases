@@ -13,9 +13,9 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 
 ---
 
-### medicalWay — study medicine the smart way (v0.6.1, Beta)
-- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.6.1-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode 17
-- SHA-256: `e22f16db066693f8cc14a242c8c58b42f38713716746c7dc5fa970e580e0f645`
+### medicalWay — study medicine the smart way (v0.6.2, Beta)
+- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.6.2-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode 18
+- SHA-256: `2602180f865ba112007d64a0f0a6bebc4c243a9b5c339117ef61212bcd82c413`
 - Write on your lecture slides, record the lecture, and turn it into flashcards and quizzes. Clinical
   calculators, lab values and more, on your phone or tablet, even offline.
 - Spaced repetition with a streak, and sync between your phone and tablet when you sign in with Google.
