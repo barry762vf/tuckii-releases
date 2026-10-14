@@ -248,7 +248,7 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'Double tap in a notebook zooms in a little, and double tap again goes back to the normal size. The Beta also brought a new look, a Home that shows your day, notebook tabs, a smarter lasso, an exam planner and new study tools. This update also fixes some bugs.'
+            whats_new     = 'The AI tutor knows which slide you have open, and Ask AI on a selection opens a small window where you can keep talking. The lasso takes what it touches, the pen line is rounder, more files open, and inside a folder you choose where new things go. A newer study AI for your device, and updates after this one can be smaller. This update also fixes some bugs.'
             privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
