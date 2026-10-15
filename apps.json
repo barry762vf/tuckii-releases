@@ -14,7 +14,7 @@
     "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/abood-labs.png",
     "status": "ready",
     "size_bytes": 4778113,
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "min_android": "8.0",
     "language": "English",
     "whats_new": "New pictures of medicalWay, which is now a Beta with a new look.",
@@ -32,20 +32,20 @@
       "name": "medicalWay",
       "tagline": "Study medicine the smart way",
       "description": "Write on your lecture slides, record the lecture, and turn it into flashcards and quizzes. Clinical calculators, lab values and more, on your phone or tablet, even offline.",
-      "version": "0.7.1",
-      "version_code": 20,
-      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.1-medicalway/MedicalWay.apk",
-      "sha256": "ba435ed8e5a4f39b75ad04bcfad0d850d0b1a348e0e42c3980d591231b253846",
+      "version": "0.7.2",
+      "version_code": 21,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay.apk",
+      "sha256": "9e23e885efff3734bbc03084e62f5a08ff307064029568cfe95cfc244855244d",
       "category": "Education",
       "accent_color": "#CB3534",
       "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/medicalway.png",
       "status": "beta",
       "featured": true,
-      "size_bytes": 158649615,
-      "updated": "2026-10-14",
+      "size_bytes": 159043451,
+      "updated": "2026-10-15",
       "min_android": "8.0",
       "language": "English",
-      "whats_new": "This update fixes some bugs. Recently: the AI tutor knows which slide you have open, Ask AI on a selection opens a small window where you can keep talking, the lasso takes what it touches, the pen line is rounder, more files open, and a newer study AI for your device.",
+      "whats_new": "Your class schedule, with the next class on Home and a reminder before it. Export a notebook to Word or PowerPoint. Copy and paste between notebooks, turn what you select, and see angles while you draw lines and shapes. New text can start at your size. Updates from this version on are much smaller downloads. This update also fixes some bugs.",
       "privacy": "Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.",
       "features": [
         "Write on PDF, PowerPoint and Word slides",
@@ -56,6 +56,64 @@
         "Exam planner and a Home that shows your day",
         "Calculators, lab values and mnemonics",
         "Optional AI tutor"
+      ],
+      "files": [
+        {
+          "abi": "arm64-v8a",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-arm64-v8a.apk",
+          "sha256": "40f570999f1d1f672a7717f0f3e719c87bf621cc673d816c9603d6f2d3ef847c",
+          "size_bytes": 80747730
+        },
+        {
+          "abi": "armeabi-v7a",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-armeabi-v7a.apk",
+          "sha256": "25f314ab8742fe0ec3be617b5376ebfd4b1fb5089026a02adf142d8f3e8e4167",
+          "size_bytes": 55941157
+        }
+      ],
+      "patches": [
+        {
+          "from_sha256": "ba435ed8e5a4f39b75ad04bcfad0d850d0b1a348e0e42c3980d591231b253846",
+          "to_sha256": "40f570999f1d1f672a7717f0f3e719c87bf621cc673d816c9603d6f2d3ef847c",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-to-0.7.2-arm64-v8a.patch",
+          "sha256": "954e04b0220303ba1fabb3ebd082729a735f2abca92f9fc34ba42224612c7976",
+          "size_bytes": 8835966
+        },
+        {
+          "from_sha256": "ba435ed8e5a4f39b75ad04bcfad0d850d0b1a348e0e42c3980d591231b253846",
+          "to_sha256": "25f314ab8742fe0ec3be617b5376ebfd4b1fb5089026a02adf142d8f3e8e4167",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-to-0.7.2-armeabi-v7a.patch",
+          "sha256": "59a0693a3536e3fbc30baf7a52bb698561a08f80eb45400431ba02059ed62eed",
+          "size_bytes": 9589447
+        },
+        {
+          "from_sha256": "ba435ed8e5a4f39b75ad04bcfad0d850d0b1a348e0e42c3980d591231b253846",
+          "to_sha256": "9e23e885efff3734bbc03084e62f5a08ff307064029568cfe95cfc244855244d",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-to-0.7.2-universal.patch",
+          "sha256": "fbfc698ef005415e2f7c0e9f52dd7ebfbacb853760005e2f698b020ba79cfd34",
+          "size_bytes": 22515340
+        },
+        {
+          "from_sha256": "47a6951c824cb8a71773a8b17149a2ba1b49f388aa2f31190ae6668fa571ec9b",
+          "to_sha256": "40f570999f1d1f672a7717f0f3e719c87bf621cc673d816c9603d6f2d3ef847c",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-to-0.7.2-arm64-v8a.patch",
+          "sha256": "954e04b0220303ba1fabb3ebd082729a735f2abca92f9fc34ba42224612c7976",
+          "size_bytes": 8835966
+        },
+        {
+          "from_sha256": "47a6951c824cb8a71773a8b17149a2ba1b49f388aa2f31190ae6668fa571ec9b",
+          "to_sha256": "25f314ab8742fe0ec3be617b5376ebfd4b1fb5089026a02adf142d8f3e8e4167",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-to-0.7.2-armeabi-v7a.patch",
+          "sha256": "59a0693a3536e3fbc30baf7a52bb698561a08f80eb45400431ba02059ed62eed",
+          "size_bytes": 9589447
+        },
+        {
+          "from_sha256": "47a6951c824cb8a71773a8b17149a2ba1b49f388aa2f31190ae6668fa571ec9b",
+          "to_sha256": "9e23e885efff3734bbc03084e62f5a08ff307064029568cfe95cfc244855244d",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-to-0.7.2-universal.patch",
+          "sha256": "fbfc698ef005415e2f7c0e9f52dd7ebfbacb853760005e2f698b020ba79cfd34",
+          "size_bytes": 22515340
+        }
       ]
     },
     {
