@@ -59,6 +59,12 @@
       ],
       "files": [
         {
+          "abi": "x86_64",
+          "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay.apk",
+          "sha256": "9e23e885efff3734bbc03084e62f5a08ff307064029568cfe95cfc244855244d",
+          "size_bytes": 159043451
+        },
+        {
           "abi": "arm64-v8a",
           "url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay-arm64-v8a.apk",
           "sha256": "40f570999f1d1f672a7717f0f3e719c87bf621cc673d816c9603d6f2d3ef847c",
