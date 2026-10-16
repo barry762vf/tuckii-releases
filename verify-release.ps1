@@ -56,6 +56,7 @@ foreach ($a in $apps.apps) {
         'aman'    { 'Aman.apk' }
         'kitchen' { 'Matbakhi.apk' }
         'minhaj'  { 'Minhaj.apk' }
+        'maktab'  { 'Maktab.apk' }
         default   { "$($a.id).apk" }
     }
     $entries += [pscustomobject]@{
