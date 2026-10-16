@@ -54,6 +54,14 @@ param(
     # Date shown as "Updated" for EngineerWay (its own, so releasing it does not change the other apps' dates).
     [string] $EngineerWayDate = (Get-Date -Format 'yyyy-MM-dd'),
 
+    [switch] $PublishMaktab,
+    [string] $MaktabVersion = '0.1.0',
+    [int] $MaktabCode = 1,
+    # alpha | beta | ready
+    [string] $MaktabStage = 'beta',
+    # Date shown as "Updated" for Maktab (its own, so releasing it does not change the other apps' dates).
+    [string] $MaktabDate = (Get-Date -Format 'yyyy-MM-dd'),
+
     # Date shown as "Updated" for the apps released in this run (the Hub and medicalWay).
     [string] $ReleaseDate = (Get-Date -Format 'yyyy-MM-dd'),
 
@@ -101,6 +109,11 @@ if ($PublishEngineerWay) {
     $shaEngineerWay = Get-Sha256 (Join-Path $RepositoryPath 'EngineerWay.apk')
 }
 
+$shaMaktab = ''
+if ($PublishMaktab) {
+    $shaMaktab = Get-Sha256 (Join-Path $RepositoryPath 'Maktab.apk')
+}
+
 Write-Output 'Hashes read from disk:'
 Write-Output "  AboodLabs.apk  $shaHub"
 Write-Output "  Tuckii.apk     $shaTuckii"
@@ -109,6 +122,7 @@ Write-Output "  Matbakhi.apk   $shaKitchen"
 if ($PublishMinhaj) { Write-Output "  Minhaj.apk     $shaMinhaj" }
 if ($PublishMedicalWay) { Write-Output "  MedicalWay.apk $shaMedicalWay" }
 if ($PublishEngineerWay) { Write-Output "  EngineerWay.apk $shaEngineerWay" }
+if ($PublishMaktab) { Write-Output "  Maktab.apk     $shaMaktab" }
 Write-Output ''
 
 $versionJson = [ordered]@{
@@ -326,6 +340,47 @@ if ($PublishEngineerWay) {
         $manifest['apps'] = @($engineerWay) + $list
     }
 }
+if ($PublishMaktab) {
+    # Before the first release: if the Sheets or Slides editor is not ready yet, change the description,
+    # whats_new and features below so they only promise what the app really does.
+    $maktab = [ordered]@{
+        id            = 'maktab'
+        package_name  = 'com.tuckai.maktab'
+        name          = 'Maktab'
+        name_local    = 'مكتب'
+        tagline       = 'Documents, sheets and slides'
+        description   = 'Open, write and edit Word documents, Excel sheets and PowerPoint slides on your phone, in Arabic or English, even offline.'
+        version       = $MaktabVersion
+        version_code  = $MaktabCode
+        download_url  = "$base/v$MaktabVersion-maktab/Maktab.apk"
+        sha256        = $shaMaktab
+        category      = 'Productivity'
+        accent_color  = '#1F3A5F'
+        logo_url      = "$logos/maktab.png"
+        status        = $MaktabStage
+        size_bytes    = Get-Size 'Maktab.apk'
+        updated       = $MaktabDate
+        min_android   = '8.0'
+        language      = 'Arabic and English'
+        whats_new     = 'The first version: write documents, fill in sheets and edit slides, and open the Office files you already have.'
+        privacy       = 'No account and no internet. Your files never leave your phone.'
+        features      = @(
+            'Word, Excel and PowerPoint files',
+            'Arabic and English, right to left',
+            'Saves as you type',
+            'Undo and redo',
+            'Works without internet'
+        )
+    }
+    # After the featured app (medicalWay, when it is listed first), before the rest.
+    $list = @($manifest['apps'])
+    if ($list.Count -gt 0 -and $list[0]['featured']) {
+        $manifest['apps'] = @($list[0], $maktab) + @($list | Select-Object -Skip 1)
+    }
+    else {
+        $manifest['apps'] = @($maktab) + $list
+    }
+}
 # Manifests MUST be written with LF line endings.
 # `.gitattributes` normalises version.json / apps.json / *.sig to LF, so signing CRLF bytes
 # produces a signature that does NOT match the file GitHub actually serves — which silently
@@ -376,7 +431,7 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 > Versions starting with 0 are not finished yet (alpha or beta).
 
 ---
-__MEDICALWAY_SECTION____ENGINEERWAY_SECTION__
+__MEDICALWAY_SECTION____ENGINEERWAY_SECTION____MAKTAB_SECTION__
 ### Abood Labs — get and update every Abood Labs app (v__HUB_VER__)
 - **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__HUB_VER__-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode __HUB_CODE__
 - SHA-256: `__HUB_SHA__`
@@ -462,6 +517,25 @@ if ($PublishEngineerWay) {
     $engineerWaySection = $engineerWaySection.Replace('__EW_VER__', $EngineerWayVersion).Replace('__EW_CODE__', [string] $EngineerWayCode).Replace('__EW_SHA__', $shaEngineerWay).Replace('__EW_STAGE__', $ewStage)
 }
 $readme = $readme.Replace('__ENGINEERWAY_SECTION__', $engineerWaySection)
+
+$maktabSection = ''
+if ($PublishMaktab) {
+    $maktabSection = @'
+
+### Maktab (مكتب) — documents, sheets and slides (v__MK_VER__, __MK_STAGE__)
+- **[Download Maktab.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__MK_VER__-maktab/Maktab.apk)** · `com.tuckai.maktab` · versionCode __MK_CODE__
+- SHA-256: `__MK_SHA__`
+- Open, write and edit Word documents, Excel sheets and PowerPoint slides on your phone, in Arabic or
+  English, even offline.
+- No account and no internet. Your files never leave your phone.
+- **__MK_STAGE__:** an early version. Things may change and you may find bugs.
+
+---
+'@
+    $mkStage = (Get-Culture).TextInfo.ToTitleCase($MaktabStage)
+    $maktabSection = $maktabSection.Replace('__MK_VER__', $MaktabVersion).Replace('__MK_CODE__', [string] $MaktabCode).Replace('__MK_SHA__', $shaMaktab).Replace('__MK_STAGE__', $mkStage)
+}
+$readme = $readme.Replace('__MAKTAB_SECTION__', $maktabSection)
 
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'README.md'),
