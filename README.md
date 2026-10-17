@@ -24,9 +24,18 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 - **Beta:** an early version. Things may change and you may find bugs.
 
 ---
-### Abood Labs — get and update every Abood Labs app (v1.5.1)
-- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.1-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 12
-- SHA-256: `69476ad4a242d8c89955ee66b42ff3df82d9913241246fb1a354e1e28a822533`
+### Maktab (مكتب) — documents, sheets and slides (v0.1.0, Beta)
+- **[Download Maktab.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.1.0-maktab/Maktab.apk)** · `com.tuckai.maktab` · versionCode 1
+- SHA-256: `9c780390b3e664ede9f22db5c3933b37366e3025b0184c9344adf2707f5028b5`
+- Open, write and edit Word documents, Excel sheets and PowerPoint slides on your phone, in Arabic or
+  English, even offline.
+- No account and no internet. Your files never leave your phone.
+- **Beta:** an early version. Things may change and you may find bugs.
+
+---
+### Abood Labs — get and update every Abood Labs app (v1.5.2)
+- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.2-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 13
+- SHA-256: `bab8b4cca7c9f375fbd34c2d7a88809493cf62e51f14b120f28631a90b80a3f4`
 - One place to install Abood Labs apps and keep them up to date. Every download is checked before it installs.
 
 ---

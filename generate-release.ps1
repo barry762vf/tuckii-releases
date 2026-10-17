@@ -64,6 +64,8 @@ param(
 
     # Date shown as "Updated" for the apps released in this run (the Hub and medicalWay).
     [string] $ReleaseDate = (Get-Date -Format 'yyyy-MM-dd'),
+    # Date shown as "Updated" for the Hub when it is released on its own day (empty = $ReleaseDate).
+    [string] $HubDate = '',
 
     [string] $Notes = 'Bug fixes and stability improvements.'
 )
@@ -152,10 +154,10 @@ $manifest = [ordered]@{
         logo_url      = "$logos/abood-labs.png"
         status        = 'ready'
         size_bytes    = Get-Size 'AboodLabs.apk'
-        updated       = $ReleaseDate
+        updated       = $(if ($HubDate) { $HubDate } else { $ReleaseDate })
         min_android   = '8.0'
         language      = 'English'
-        whats_new     = 'New pictures of medicalWay, which is now a Beta with a new look.'
+        whats_new     = 'Pictures of Maktab, the new office app for documents, sheets and slides.'
         privacy       = 'Only downloads the app list and the apps you choose. No account, no tracking.'
         features      = @('All Abood Labs apps in one place', 'Updates you can trust', 'Works offline with the saved list')
     }
