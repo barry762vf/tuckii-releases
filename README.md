@@ -24,8 +24,8 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 - **Beta:** an early version. Things may change and you may find bugs.
 
 ---
-### Abood Labs — get and update every Abood Labs app (v1.5.1)
-- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.1-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 12
+### Abood Labs — get and update every Abood Labs app (v1.5.2)
+- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.2-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 13
 - SHA-256: `bab8b4cca7c9f375fbd34c2d7a88809493cf62e51f14b120f28631a90b80a3f4`
 - One place to install Abood Labs apps and keep them up to date. Every download is checked before it installs.
 
