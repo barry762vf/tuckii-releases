@@ -13,9 +13,9 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 
 ---
 
-### medicalWay — study medicine the smart way (v0.7.2, Beta)
-- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.2-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode 21
-- SHA-256: `9e23e885efff3734bbc03084e62f5a08ff307064029568cfe95cfc244855244d`
+### medicalWay — study medicine the smart way (v0.7.3, Beta)
+- **[Download MedicalWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.7.3-medicalway/MedicalWay.apk)** · `com.tuckai.medicalway` · versionCode 22
+- SHA-256: `babbf70b84a8df1b37f3451d6fc4b2a30286e06cb83052689329b3aaaa90f72f`
 - Write on your lecture slides, record the lecture, and turn it into flashcards and quizzes. Clinical
   calculators, lab values and more, on your phone or tablet, even offline.
 - Spaced repetition with a streak, and sync between your phone and tablet when you sign in with Google.
@@ -24,17 +24,8 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 - **Beta:** an early version. Things may change and you may find bugs.
 
 ---
-### Maktab (مكتب) — documents, sheets and slides (v0.1.0, Beta)
-- **[Download Maktab.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.1.0-maktab/Maktab.apk)** · `com.tuckai.maktab` · versionCode 1
-- SHA-256: `9c780390b3e664ede9f22db5c3933b37366e3025b0184c9344adf2707f5028b5`
-- Open, write and edit Word documents, Excel sheets and PowerPoint slides on your phone, in Arabic or
-  English, even offline.
-- No account and no internet. Your files never leave your phone.
-- **Beta:** an early version. Things may change and you may find bugs.
-
----
-### Abood Labs — get and update every Abood Labs app (v1.5.2)
-- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.2-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 13
+### Abood Labs — get and update every Abood Labs app (v1.5.1)
+- **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.5.1-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode 12
 - SHA-256: `bab8b4cca7c9f375fbd34c2d7a88809493cf62e51f14b120f28631a90b80a3f4`
 - One place to install Abood Labs apps and keep them up to date. Every download is checked before it installs.
 

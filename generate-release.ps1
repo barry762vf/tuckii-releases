@@ -268,7 +268,7 @@ if ($PublishMedicalWay) {
             updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
-            whats_new     = 'Your class schedule, with the next class on Home and a reminder before it. Export a notebook to Word or PowerPoint. Copy and paste between notebooks, turn what you select, and see angles while you draw lines and shapes. New text can start at your size. Updates from this version on are much smaller downloads. This update also fixes some bugs.'
+            whats_new     = 'Arabic and mixed Arabic and English slides and documents now open with the letters joined and the words in order. The timer tells you when a focus round or a break ends. Zooming out and moving around a notebook is smoother, and the app is steadier. This update also fixes some bugs.'
             privacy       = 'Your notes stay on your device unless you sign in: then notebooks, cards and progress sync to your own account (packed small; PDFs, photos and recordings stay on the device). Also only what you choose: the AI tutor (with your own key) and feedback you send.'
             features      = @(
                 'Write on PDF, PowerPoint and Word slides',
