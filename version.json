@@ -1,7 +1,7 @@
 {
-  "version": "1.7.0",
-  "version_code": 27,
-  "notes": "Welcome to Stashii! The complete evolution of Tuckii with the Stash Vault mascot, Cyber Tangerine and Electric Blue redesign, and direct Movies/Stashii media pipeline.",
-  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.7.0/Tuckii.apk",
-  "sha256": "fe154fecd38523a564e7ec3519f29c167013f8ff1c805eebba6b5f0cd1b0ac6a"
+  "version": "1.7.1",
+  "version_code": 28,
+  "notes": "Smart background video and link preview thumbnail auto-refresh strictly on Wi-Fi with full cellular data protection.",
+  "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v1.7.1/Tuckii.apk",
+  "sha256": "c24d1920685247f7cf00bc263a71171ba4fe5de377c9a494d7d2fe8608de5030"
 }

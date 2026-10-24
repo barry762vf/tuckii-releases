@@ -31,9 +31,9 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 
 ---
 
-### Stashii — stash links and read them later (v1.7.0)
-- **[Download Tuckii.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.7.0/Tuckii.apk)** · `com.tuckai.app` · versionCode 27
-- SHA-256: `fe154fecd38523a564e7ec3519f29c167013f8ff1c805eebba6b5f0cd1b0ac6a`
+### Stashii — stash links and read them later (v1.7.1)
+- **[Download Tuckii.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v1.7.1/Tuckii.apk)** · `com.tuckai.app` · versionCode 28
+- SHA-256: `c24d1920685247f7cf00bc263a71171ba4fe5de377c9a494d7d2fe8608de5030`
 - Keep links, articles and videos in one tidy place and read them later, even without internet.
 - Your bookmarks stay on your phone. Saving a link opens that page to read its title. Optional video
   downloads send the link to outside services that are not part of Abood Labs.

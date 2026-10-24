@@ -181,8 +181,10 @@ $manifest = [ordered]@{
             logo_url      = "$logos/tuckii.jpg"
             status        = 'ready'
             size_bytes    = Get-Size 'Tuckii.apk'
+            updated       = $ReleaseDate
             min_android   = '8.0'
             language      = 'English'
+            whats_new     = 'Smart background video and link preview thumbnail auto-refresh strictly on Wi-Fi.'
             privacy       = 'Your bookmarks stay on your phone. Saving a link opens that page to read its title. Optional video downloads send the link to outside services.'
             features      = @('Read saved pages offline', 'Fast search', 'Collections', 'Undo if you delete by mistake')
         },
