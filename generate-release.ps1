@@ -423,7 +423,7 @@ if ($PublishChesso) {
         updated       = $ChessoDate
         min_android   = '8.0'
         language      = 'Arabic and English'
-        whats_new     = 'Finishing a lesson now ends with a celebration. Your rating appears after your first 5 rated games, text is easier to read, and the game screen is roomier.'
+        whats_new     = 'Simpler words everywhere, a shorter start that takes you straight to your first lesson, and a softer board at night.'
         privacy       = 'Lessons, bots and analysis run on your phone. When online, the app sends your progress, game summaries and mistake positions to Abood Labs to improve lessons and bots, plus your Google email if you connect an account.'
         features      = @(
             'Lessons from first move to master',
