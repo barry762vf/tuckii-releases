@@ -161,7 +161,7 @@ $manifest = [ordered]@{
         updated       = $(if ($HubDate) { $HubDate } else { $ReleaseDate })
         min_android   = '8.0'
         language      = 'English'
-        whats_new     = 'Pictures of Maktab, the new office app for documents, sheets and slides.'
+        whats_new     = 'Updated Stashii branding, logo, and high-resolution previews in the store.'
         privacy       = 'Only downloads the app list and the apps you choose. No account, no tracking.'
         features      = @('All Abood Labs apps in one place', 'Updates you can trust', 'Works offline with the saved list')
     }
