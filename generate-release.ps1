@@ -51,6 +51,9 @@ param(
     [int] $EngineerWayCode = 1,
     # alpha | beta | ready
     [string] $EngineerWayStage = 'beta',
+    # The GitHub release the file is under, when it is not "v<version>-engineerway" (a first release whose number was
+    # used before by a file that must not be replaced).
+    [string] $EngineerWayTag = '',
     # Date shown as "Updated" for EngineerWay (its own, so releasing it does not change the other apps' dates).
     [string] $EngineerWayDate = (Get-Date -Format 'yyyy-MM-dd'),
 
@@ -107,6 +110,7 @@ if ($PublishMedicalWay) {
 }
 
 $shaEngineerWay = ''
+$ewTag = if ($EngineerWayTag) { $EngineerWayTag } else { "v$EngineerWayVersion-engineerway" }
 if ($PublishEngineerWay) {
     $shaEngineerWay = Get-Sha256 (Join-Path $RepositoryPath 'EngineerWay.apk')
 }
@@ -165,15 +169,15 @@ $manifest = [ordered]@{
         [ordered]@{
             id            = 'tuckii'
             package_name  = 'com.tuckai.app'
-            name          = 'Tuckii'
-            tagline       = 'Save links and read them later'
+            name          = 'Stashii'
+            tagline       = 'Stash links and download media'
             description   = 'Keep links, articles and videos in one tidy place and read them later, even without internet.'
             version       = $TuckiiVersion
             version_code  = $TuckiiCode
             download_url  = "$base/v$TuckiiVersion/Tuckii.apk"
             sha256        = $shaTuckii
             category      = 'Reading'
-            accent_color  = '#C96F4F'
+            accent_color  = '#FF6B00'
             logo_url      = "$logos/tuckii.jpg"
             status        = 'ready'
             size_bytes    = Get-Size 'Tuckii.apk'
@@ -308,10 +312,10 @@ if ($PublishEngineerWay) {
         package_name  = 'com.tuckai.engineerway'
         name          = 'EngineerWay'
         tagline       = 'Engineering notes, the smart way'
-        description   = 'Notebooks and study tools set up for your engineering major. Read and write on your PDF, PowerPoint and Word files, use a scientific calculator on the page, and revise with flashcards and quizzes, even offline.'
+        description   = 'Notebooks and study tools set up for your engineering major. Read and write on your PDF, PowerPoint and Word files (Arabic too), plot functions, use a scientific calculator on the page, and revise with flashcards and quizzes, even offline.'
         version       = $EngineerWayVersion
         version_code  = $EngineerWayCode
-        download_url  = "$base/v$EngineerWayVersion-engineerway/EngineerWay.apk"
+        download_url  = "$base/$ewTag/EngineerWay.apk"
         sha256        = $shaEngineerWay
         category      = 'Education'
         accent_color  = '#0066FF'
@@ -321,11 +325,12 @@ if ($PublishEngineerWay) {
         updated       = $EngineerWayDate
         min_android   = '8.0'
         language      = 'English'
-        whats_new     = 'The first version: pick your major and get its calculators and formula sheets, a scientific calculator that floats over your notes, a reader for your documents, and notebooks with real pens.'
+        whats_new     = 'The first public version: pick your major and get its calculators and formula sheets, a scientific calculator that floats over your notes, a graph plotter, notebooks with real pens, Arabic and English documents that read right, a class schedule, an exam planner and a focus timer that tells you when time is up.'
         privacy       = 'No account. Your notes stay on your device. Only what you choose leaves it: the optional AI tutor with your own key. The app also checks this list for updates.'
         features      = @(
             'Tools for your engineering major',
             'Scientific calculator on the page',
+            'Graph plotter and about 50 calculators',
             'Read and write on PDF, PowerPoint, Word',
             'Engineering paper and real pens',
             'Record lectures while you write',
@@ -441,7 +446,7 @@ __MEDICALWAY_SECTION____ENGINEERWAY_SECTION____MAKTAB_SECTION__
 
 ---
 
-### Tuckii — save links and read them later (v__TUCKII_VER__)
+### Stashii — stash links and read them later (v__TUCKII_VER__)
 - **[Download Tuckii.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__TUCKII_VER__/Tuckii.apk)** · `com.tuckai.app` · versionCode __TUCKII_CODE__
 - SHA-256: `__TUCKII_SHA__`
 - Keep links, articles and videos in one tidy place and read them later, even without internet.
@@ -506,7 +511,7 @@ if ($PublishEngineerWay) {
     $engineerWaySection = @'
 
 ### EngineerWay — engineering notes, the smart way (v__EW_VER__, __EW_STAGE__)
-- **[Download EngineerWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__EW_VER__-engineerway/EngineerWay.apk)** · `com.tuckai.engineerway` · versionCode __EW_CODE__
+- **[Download EngineerWay.apk](https://github.com/barry762vf/tuckii-releases/releases/download/__EW_TAG__/EngineerWay.apk)** · `com.tuckai.engineerway` · versionCode __EW_CODE__
 - SHA-256: `__EW_SHA__`
 - Notebooks and study tools set up for your engineering major. Read and write on your PDF, PowerPoint
   and Word files, use a scientific calculator on the page, and revise with flashcards and quizzes.
@@ -516,7 +521,7 @@ if ($PublishEngineerWay) {
 ---
 '@
     $ewStage = (Get-Culture).TextInfo.ToTitleCase($EngineerWayStage)
-    $engineerWaySection = $engineerWaySection.Replace('__EW_VER__', $EngineerWayVersion).Replace('__EW_CODE__', [string] $EngineerWayCode).Replace('__EW_SHA__', $shaEngineerWay).Replace('__EW_STAGE__', $ewStage)
+    $engineerWaySection = $engineerWaySection.Replace('__EW_TAG__', $ewTag).Replace('__EW_VER__', $EngineerWayVersion).Replace('__EW_CODE__', [string] $EngineerWayCode).Replace('__EW_SHA__', $shaEngineerWay).Replace('__EW_STAGE__', $ewStage)
 }
 $readme = $readme.Replace('__ENGINEERWAY_SECTION__', $engineerWaySection)
 
