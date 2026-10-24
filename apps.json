@@ -158,6 +158,35 @@
       ]
     },
     {
+      "id": "chesso",
+      "package_name": "com.tuckai.chesso",
+      "name": "Chesso",
+      "tagline": "Learn chess with Chesso",
+      "description": "Learn chess step by step with Chesso the knight: lessons, puzzles, and bots from beginner to master that play at their rating. Review every game to see your best and worst moves.",
+      "version": "0.0.1",
+      "version_code": 1,
+      "download_url": "https://github.com/barry762vf/tuckii-releases/releases/download/v0.0.1-chesso/Chesso.apk",
+      "sha256": "bbcac2d8aa03a0af79ae6168bbf3df0ceb2b12f3f742226ee7260a40d6bed49e",
+      "category": "Games",
+      "accent_color": "#62E305",
+      "logo_url": "https://raw.githubusercontent.com/barry762vf/tuckii-releases/main/logos/chesso.png",
+      "status": "beta",
+      "size_bytes": 4800566,
+      "updated": "2026-10-24",
+      "min_android": "8.0",
+      "language": "Arabic and English",
+      "whats_new": "The first version: a training journey from the first move to master tactics, rated bots, puzzles, game review and a daily streak.",
+      "privacy": "Lessons, bots and analysis run on your phone. When online, the app sends your progress, game summaries and mistake positions to Abood Labs to improve lessons and bots, plus your Google email if you connect an account.",
+      "features": [
+        "Lessons from first move to master",
+        "Bots that play at their rating",
+        "Puzzles at your level",
+        "Full game review",
+        "Daily streak and reminders",
+        "Arabic and English"
+      ]
+    },
+    {
       "id": "tuckii",
       "package_name": "com.tuckai.app",
       "name": "Stashii",

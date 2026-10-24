@@ -65,6 +65,14 @@ param(
     # Date shown as "Updated" for Maktab (its own, so releasing it does not change the other apps' dates).
     [string] $MaktabDate = (Get-Date -Format 'yyyy-MM-dd'),
 
+    [switch] $PublishChesso,
+    [string] $ChessoVersion = '0.0.1',
+    [int] $ChessoCode = 1,
+    # alpha | beta | ready
+    [string] $ChessoStage = 'beta',
+    # Date shown as "Updated" for Chesso (its own, so releasing it does not change the other apps' dates).
+    [string] $ChessoDate = (Get-Date -Format 'yyyy-MM-dd'),
+
     # Date shown as "Updated" for the apps released in this run (the Hub and medicalWay).
     [string] $ReleaseDate = (Get-Date -Format 'yyyy-MM-dd'),
     # Date shown as "Updated" for the Hub when it is released on its own day (empty = $ReleaseDate).
@@ -120,6 +128,11 @@ if ($PublishMaktab) {
     $shaMaktab = Get-Sha256 (Join-Path $RepositoryPath 'Maktab.apk')
 }
 
+$shaChesso = ''
+if ($PublishChesso) {
+    $shaChesso = Get-Sha256 (Join-Path $RepositoryPath 'Chesso.apk')
+}
+
 Write-Output 'Hashes read from disk:'
 Write-Output "  AboodLabs.apk  $shaHub"
 Write-Output "  Tuckii.apk     $shaTuckii"
@@ -129,6 +142,7 @@ if ($PublishMinhaj) { Write-Output "  Minhaj.apk     $shaMinhaj" }
 if ($PublishMedicalWay) { Write-Output "  MedicalWay.apk $shaMedicalWay" }
 if ($PublishEngineerWay) { Write-Output "  EngineerWay.apk $shaEngineerWay" }
 if ($PublishMaktab) { Write-Output "  Maktab.apk     $shaMaktab" }
+if ($PublishChesso) { Write-Output "  Chesso.apk     $shaChesso" }
 Write-Output ''
 
 $versionJson = [ordered]@{
@@ -390,6 +404,45 @@ if ($PublishMaktab) {
         $manifest['apps'] = @($maktab) + $list
     }
 }
+if ($PublishChesso) {
+    $chesso = [ordered]@{
+        id            = 'chesso'
+        package_name  = 'com.tuckai.chesso'
+        name          = 'Chesso'
+        tagline       = 'Learn chess with Chesso'
+        description   = 'Learn chess step by step with Chesso the knight: lessons, puzzles, and bots from beginner to master that play at their rating. Review every game to see your best and worst moves.'
+        version       = $ChessoVersion
+        version_code  = $ChessoCode
+        download_url  = "$base/v$ChessoVersion-chesso/Chesso.apk"
+        sha256        = $shaChesso
+        category      = 'Games'
+        accent_color  = '#62E305'
+        logo_url      = "$logos/chesso.png"
+        status        = $ChessoStage
+        size_bytes    = Get-Size 'Chesso.apk'
+        updated       = $ChessoDate
+        min_android   = '8.0'
+        language      = 'Arabic and English'
+        whats_new     = 'The first version: a training journey from the first move to master tactics, rated bots, puzzles, game review and a daily streak.'
+        privacy       = 'Lessons, bots and analysis run on your phone. When online, the app sends your progress, game summaries and mistake positions to Abood Labs to improve lessons and bots, plus your Google email if you connect an account.'
+        features      = @(
+            'Lessons from first move to master',
+            'Bots that play at their rating',
+            'Puzzles at your level',
+            'Full game review',
+            'Daily streak and reminders',
+            'Arabic and English'
+        )
+    }
+    # After the featured app (medicalWay, when it is listed first), before the rest.
+    $list = @($manifest['apps'])
+    if ($list.Count -gt 0 -and $list[0]['featured']) {
+        $manifest['apps'] = @($list[0], $chesso) + @($list | Select-Object -Skip 1)
+    }
+    else {
+        $manifest['apps'] = @($chesso) + $list
+    }
+}
 # Manifests MUST be written with LF line endings.
 # `.gitattributes` normalises version.json / apps.json / *.sig to LF, so signing CRLF bytes
 # produces a signature that does NOT match the file GitHub actually serves — which silently
@@ -440,7 +493,7 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 > Versions starting with 0 are not finished yet (alpha or beta).
 
 ---
-__MEDICALWAY_SECTION____ENGINEERWAY_SECTION____MAKTAB_SECTION__
+__MEDICALWAY_SECTION____ENGINEERWAY_SECTION____MAKTAB_SECTION____CHESSO_SECTION__
 ### Abood Labs — get and update every Abood Labs app (v__HUB_VER__)
 - **[Download AboodLabs.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__HUB_VER__-hub/AboodLabs.apk)** · `com.tuckai.hub` · versionCode __HUB_CODE__
 - SHA-256: `__HUB_SHA__`
@@ -545,6 +598,26 @@ if ($PublishMaktab) {
     $maktabSection = $maktabSection.Replace('__MK_VER__', $MaktabVersion).Replace('__MK_CODE__', [string] $MaktabCode).Replace('__MK_SHA__', $shaMaktab).Replace('__MK_STAGE__', $mkStage)
 }
 $readme = $readme.Replace('__MAKTAB_SECTION__', $maktabSection)
+
+$chessoSection = ''
+if ($PublishChesso) {
+    $chessoSection = @'
+
+### Chesso — learn chess with Chesso the knight (v__CH_VER__, __CH_STAGE__)
+- **[Download Chesso.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v__CH_VER__-chesso/Chesso.apk)** · `com.tuckai.chesso` · versionCode __CH_CODE__
+- SHA-256: `__CH_SHA__`
+- Lessons, puzzles, and bots from beginner to master that play at their rating, with full game review.
+  In Arabic and English.
+- Lessons, bots and analysis run on your phone. When online, the app sends your progress, game
+  summaries and mistake positions to Abood Labs, plus your Google email if you connect an account.
+- **__CH_STAGE__:** an early version. Things may change and you may find bugs.
+
+---
+'@
+    $chStage = (Get-Culture).TextInfo.ToTitleCase($ChessoStage)
+    $chessoSection = $chessoSection.Replace('__CH_VER__', $ChessoVersion).Replace('__CH_CODE__', [string] $ChessoCode).Replace('__CH_SHA__', $shaChesso).Replace('__CH_STAGE__', $chStage)
+}
+$readme = $readme.Replace('__CHESSO_SECTION__', $chessoSection)
 
 [IO.File]::WriteAllText(
     (Join-Path $RepositoryPath 'README.md'),
