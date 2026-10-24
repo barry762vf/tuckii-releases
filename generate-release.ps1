@@ -423,7 +423,7 @@ if ($PublishChesso) {
         updated       = $ChessoDate
         min_android   = '8.0'
         language      = 'Arabic and English'
-        whats_new     = 'The first version: a training journey from the first move to master tactics, rated bots, puzzles, game review and a daily streak.'
+        whats_new     = 'A bright new look with a light theme (dark is still in Settings), a new lesson path, and a game review that stays still while you step through the moves. Your top bar now shows XP and cups.'
         privacy       = 'Lessons, bots and analysis run on your phone. When online, the app sends your progress, game summaries and mistake positions to Abood Labs to improve lessons and bots, plus your Google email if you connect an account.'
         features      = @(
             'Lessons from first move to master',
