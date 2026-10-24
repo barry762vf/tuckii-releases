@@ -24,9 +24,9 @@ Download the apps here, or get them all (and their updates) in the **Abood Labs*
 - **Beta:** an early version. Things may change and you may find bugs.
 
 ---
-### Chesso — learn chess with Chesso the knight (v0.0.2, Beta)
-- **[Download Chesso.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.0.2-chesso/Chesso.apk)** · `com.tuckai.chesso` · versionCode 2
-- SHA-256: `45402b30fb9ed028b32307203381e14d4f9c1562de942f84128c527094df81d2`
+### Chesso — learn chess with Chesso the knight (v0.0.3, Beta)
+- **[Download Chesso.apk](https://github.com/barry762vf/tuckii-releases/releases/download/v0.0.3-chesso/Chesso.apk)** · `com.tuckai.chesso` · versionCode 3
+- SHA-256: `cc6e10f1ffe614c7fa60a360fee7d488e5f87ae0d055bd4144b277f21d81ad3a`
 - Lessons, puzzles, and bots from beginner to master that play at their rating, with full game review.
   In Arabic and English.
 - Lessons, bots and analysis run on your phone. When online, the app sends your progress, game
